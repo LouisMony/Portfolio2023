@@ -1,0 +1,34 @@
+@import '../index.scss';
+
+.cursor {
+    width: 8px;
+    aspect-ratio: 1/1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 29000;
+    background-color: $white;
+    mix-blend-mode: difference;
+
+    @media screen and (max-width: $max_tablette) {
+        display: none;
+    }
+}
+
+.activeCursor {
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-image: url('../media/arrowCursor.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

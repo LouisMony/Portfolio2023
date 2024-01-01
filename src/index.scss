@@ -1,0 +1,143 @@
+//FONT
+//NOHEMI
+@font-face {
+  font-family: "NohemiB";   /*Can be any text*/
+  src: local('NohemiB'), url("./font/Nohemi/Nohemi-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "NohemiR";   /*Can be any text*/
+  src: local('NohemiR'), url("./font/Nohemi/Nohemi-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "NohemiM";   /*Can be any text*/
+  src: local('NohemiM'), url("./font/Nohemi/Nohemi-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "NohemiT";   /*Can be any text*/
+  src: local('NohemiT'), url("./font/Nohemi/Nohemi-Thin.woff") format("woff");
+}
+//VARIABLE
+
+$baseUnit : 24px;
+$max-mobile: 700px;
+$max_tablette: 1000px;
+$white : #dcdcdc;
+$background : #111111;
+$maincolor: #FFE500;
+
+//GENERAL
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "NohemiR", Helvetica, sans-serif;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: $background;
+  overflow-x: hidden;
+
+  .transi{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0vh;
+    width: 100vw;
+    z-index: 11000;
+    mix-blend-mode: normal;
+
+    display: flex;
+    
+    &__line{
+      width: 100%;
+      height: 0;
+      background-color: rgb(35, 35, 35);
+
+      @media screen and (max-width: $max_mobile) {
+        &:nth-child(odd) {
+            display: none;
+        }
+      }
+    }
+  }
+
+  .gsapMain{
+    //transform-origin: center;
+  }
+
+  .animEnter{
+    position: relative;
+    &::before{
+      content: 'Enter';
+      position: absolute;
+      text-transform: uppercase;
+      font-family: 'Helvetica';
+      font-size: 12px;
+      transform: translate(-50%, -100%);
+      bottom: -5px;
+      left: 50%;
+      color: $white;
+      mix-blend-mode: difference;
+      z-index: 10000;
+      opacity: 0;
+      transition: all 500ms cubic-bezier(.72,0,.23,1);
+    }
+
+    &:hover{
+      &::before{
+        opacity: 1;
+        bottom: 0;
+      }
+    }
+  }
+
+  &:before {
+    z-index: 50000;
+    position: fixed;
+    content: '';
+    height: 300%;
+    width: 300%;
+    top: -100%;
+    left: -50%;
+    pointer-events: none;
+    user-select: none;
+    background-image: url('./media/texture.png');
+    opacity: 0.029;
+    animation: noise 8s steps(10) infinite;
+
+    @media screen and (max-width: $max_mobile) {
+      display: none;
+    }
+  }
+
+  @keyframes noise {
+    0%, 100% { transform:translate(0, 0); }
+    10% { transform:translate(-5%, -10%); }
+    20% { transform:translate(-15%, 5%); }
+    30% { transform:translate(7%, -25%); }
+    40% { transform:translate(-5%, 25%); }
+    50% { transform:translate(-15%, 10%); }
+    60% { transform:translate(15%, 0%); }
+    70% { transform:translate(0%, 15%); }
+    80% { transform:translate(3%, 35%); }
+    90% { transform:translate(-10%, 10%); }
+  }
+}
+
+p,h1,h2,h3,h3{
+  margin:0;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
