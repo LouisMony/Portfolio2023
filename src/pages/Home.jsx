@@ -13,7 +13,7 @@ function Home(){
     const navigate = useNavigate();
     const nextWorkLink = useRef(null)
 
-    const [currentSelectedWork, setCurrentSelectedWork] = useState(worklist[0])
+    const [currentSelectedWork, setCurrentSelectedWork] = useState(worklist[Math.floor(Math.random() * 6)])
    
     useEffect(() => {
         HandleCursorAnimation()
