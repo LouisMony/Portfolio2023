@@ -34,7 +34,7 @@ export function HandleWorkAnimation(isMobile){
     })
 
     document.querySelectorAll(".JsBasicP").forEach(item=>{
-        gsap.fromTo(item,{y:100, opacity:0},{scrollTrigger:{trigger: item, start: 'top bottom'},duration: 1.5, opacity:1, y:0})
+        gsap.fromTo(item,{y:100, opacity:0},{scrollTrigger:{trigger: item, start: 'top bottom', end: 'top top', scrub: .5},duration: 1.5, opacity:1, y:0})
     })
 
     gsap.fromTo('.work__next__content',{height: "0%"},{scrollTrigger:{trigger: ".work__next__content", scrub: .5, start: 'top bottom'},height: "60%"})
