@@ -13,14 +13,14 @@ const ScrollScooter = (props) => {
   
     for (let index = 0; index < 41; index++) {
       graduationDivs.push(
-        <div className='Home__ScrollScooter__Graduation' key={index}>
+        <div className='Home2__ScrollScooter__Graduation' key={index}>
         </div>
       );
     }
   
     return (
-      <div className='Home__ScrollScooter'>
-        <div ref={pointerRef} className='Home__ScrollScooter__pointer'></div>
+      <div className='Home2__ScrollScooter'>
+        <div ref={pointerRef} className='Home2__ScrollScooter__pointer'></div>
         {graduationDivs}
       </div>
     );

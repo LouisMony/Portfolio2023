@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../style/Homev2.scss'
 import { useNavigate } from "react-router-dom";
-import { handleTransiv2 } from "../js/handleTransi";
+import { handleTransi } from "../js/handleTransi";
 
 //COMPOSANT
 import Slider from "./Home/Slider";
@@ -12,7 +12,6 @@ import { worklist } from "../js/worklist";
 
 function Homev2(){
     const sliderItems = worklist
-    console.log(worklist);
 
     const naviguate = useNavigate()
 
@@ -36,7 +35,7 @@ function Homev2(){
 
     const handleClickTitle = () => {
       let activeClip = sliderItems.find(item => item.id === activeItem);
-      handleTransiv2(naviguate, '/work/'+activeClip.link)
+      handleTransi(naviguate, '/work/'+activeClip.link)
     }
 
     const handleChangeActiveItem = (id) => {

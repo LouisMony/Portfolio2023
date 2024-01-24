@@ -8,8 +8,8 @@ const Component__Header = ({ toggleAboutFunction }) => {
   const location = useLocation()
 
   const checkLocation = () => {
-    if (location.pathname !== '/') {
-      handleTransi(naviguate, '/')
+    if (location.pathname !== '/hometest') {
+      handleTransi(naviguate, '/hometest')
     }
   }
 

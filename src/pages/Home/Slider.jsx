@@ -46,7 +46,7 @@ const Slider = (props) => {
 
             const newActiveItemTitle = props.sliderItems[activeItem + 1].name
             props.handleChangeTitle(newActiveItemTitle)
-            props.handleChangeScroll(props.sliderItems[activeItem + 1].order, props.sliderItems.length)
+            props.handleChangeScroll(props.sliderItems[activeItem + 1].id, props.sliderItems.length)
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight - (window.innerHeight * 0.5);
             
@@ -68,7 +68,7 @@ const Slider = (props) => {
             }
             const newActiveItemTitle = props.sliderItems[activeItem - 1].name
             props.handleChangeTitle(newActiveItemTitle)
-            props.handleChangeScroll(props.sliderItems[activeItem - 1].order, props.sliderItems.length)
+            props.handleChangeScroll(props.sliderItems[activeItem - 1].id, props.sliderItems.length)
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight + (window.innerHeight * 0.5);
             
