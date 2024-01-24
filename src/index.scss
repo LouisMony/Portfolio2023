@@ -170,6 +170,7 @@ body{
   }
 
   &:before {
+    display: none;
     z-index: 50000;
     position: fixed;
     content: '';

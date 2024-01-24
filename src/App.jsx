@@ -31,7 +31,7 @@ function App(){
 
     const location = useLocation();
 
-    const toggleAbout = () => {
+    const toggleAbout = (e) => {
       if(showAbout === false){
         setShowAbout(!showAbout)
       }

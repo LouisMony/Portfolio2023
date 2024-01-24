@@ -10,7 +10,7 @@ export const worklist = [
     {
       id: 1,
       date: "10.2022",
-      name: "AIDES Campaign 2022 Website",
+      name: "AIDES Campaign 2022",
       link: "aides", 
       type: "Professional",
       background : '/media/work/aides/banner.jpg'

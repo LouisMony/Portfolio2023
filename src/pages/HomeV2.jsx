@@ -43,7 +43,7 @@ function Homev2(){
     }
 
     return (
-      <div className='Home2'>
+      <div className='Home2 gsapMain'>
         <Slider sliderItems={sliderItems} handleChangeActiveItem={handleChangeActiveItem} handleChangeTitle={handleChangeTitle} handleChangeScroll={handleChangeScroll}/>
         <Title title={title} handleClickTitle={handleClickTitle}/>
         <ScrollScooter scrollInfo={scrollInfo}/>
