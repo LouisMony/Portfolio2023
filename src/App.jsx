@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { projectsData } from './js/worklist';
 //COMP
 import Home from './pages/Home';
+import Homev2 from './pages/HomeV2';
 import Work from './pages/Work';
 import About from './pages/About';
 import Component__Footer from './components/Component__Footer';
@@ -155,7 +156,8 @@ function App(){
             {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
             <Routes location={location} key={location.pathname}>
-              <Route index element={<Home/>} />
+              {/* <Route index element={<Home/>} /> */}
+              <Route path={'hometest'} element={<Homev2/>} />
               {projectsData.map((project, index) => (
                 <Route key={index} path={project.path} element={<Work {...project.data} />}/>
               ))}
