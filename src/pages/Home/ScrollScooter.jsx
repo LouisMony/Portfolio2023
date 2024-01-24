@@ -17,7 +17,7 @@ const ScrollScooter = (props) => {
         </div>
       );
     }
-  
+
     return (
       <div className='Home2__ScrollScooter'>
         <div ref={pointerRef} className='Home2__ScrollScooter__pointer'></div>

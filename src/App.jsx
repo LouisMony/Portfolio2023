@@ -9,7 +9,6 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Component__Footer from './components/Component__Footer';
 import Component__Header from './components/Component__Header';
-import Component__Transi from './components/Component__Transi';
 import Component__Loader from './components/Component__Loader';
 import Component__Cursor from './components/Component__Cursor';
 
@@ -152,7 +151,6 @@ function App(){
           <div>
             <Component__Header toggleAboutFunction={toggleAbout}/>
             <Component__Footer />
-            <Component__Transi />
             <ComponentTransi />
             <Component__Cursor />
             {showLoader && location.pathname === '/' ? <Component__Loader toggleLoader={toggleLoader} /> : null }

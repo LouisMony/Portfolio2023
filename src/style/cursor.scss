@@ -32,3 +32,33 @@
         background-size: contain;
     }
 }
+
+.cursorhome {
+    width: 70px;
+    aspect-ratio: 1/1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 29000;
+    background-color: transparent;
+    border: solid 1px $white;
+    mix-blend-mode: difference;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .arrow{
+        transform: scaleY(1);
+        transition: all 300ms ease-out;
+    }
+    .arrowreverse{
+        transform: scaleY(-1);
+    }
+
+    // @media screen and (max-width: $max_tablette) {
+    //     display: none;
+    // }
+}
