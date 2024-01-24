@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 
 const Title = (props) => {
+    const titleRef = useRef(null)
     const [currentTitle, setCurrentTitle] = useState('Texte')
 
     const handleClickTitle = (e) =>{
@@ -10,7 +11,7 @@ const Title = (props) => {
     }
     
     useEffect(() => {
-        gsap.to('.Home__Title__h2', {
+        gsap.to('.Home2__Title__h2', {
             translateY: "-13vw", 
             duration: .5, 
             ease: "power3.out", 
@@ -22,7 +23,7 @@ const Title = (props) => {
 
     useEffect(() => {
         if(currentTitle !== 'Texte'){
-            gsap.set('.Home__Title__h2', {
+            gsap.set('.Home2__Title__h2', {
                 translateY: "0%", 
             })
         }

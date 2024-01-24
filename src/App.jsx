@@ -13,6 +13,8 @@ import Component__Transi from './components/Component__Transi';
 import Component__Loader from './components/Component__Loader';
 import Component__Cursor from './components/Component__Cursor';
 
+import ComponentTransi from './components/ComponentTransi';
+
 //STYLE 
 import './index.scss';
 import gsap from 'gsap';
@@ -151,6 +153,7 @@ function App(){
             <Component__Header toggleAboutFunction={toggleAbout}/>
             <Component__Footer />
             <Component__Transi />
+            <ComponentTransi />
             <Component__Cursor />
             {showLoader && location.pathname === '/' ? <Component__Loader toggleLoader={toggleLoader} /> : null }
             {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }

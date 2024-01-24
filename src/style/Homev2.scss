@@ -34,7 +34,7 @@
 
         .activeItem{
             img{
-                filter: brightness(.5);
+                filter: brightness(.75);
             }
             
         }
@@ -61,10 +61,10 @@
         }
 
         .current{
-            &:hover{
-                letter-spacing: 30px;
-                margin-right: -30px;
-            }
+            // &:hover{
+            //     letter-spacing: 30px;
+            //     margin-right: -30px;
+            // }
         }
     }
 

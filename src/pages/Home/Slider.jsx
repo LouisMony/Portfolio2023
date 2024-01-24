@@ -50,7 +50,7 @@ const Slider = (props) => {
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight - (window.innerHeight * 0.5);
             
-            gsap.to('.Home__Slider', {
+            gsap.to('.Home2__Slider', {
                 top: newHeight, 
                 duration: .5, 
                 ease: "power3.out", 
@@ -72,7 +72,7 @@ const Slider = (props) => {
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight + (window.innerHeight * 0.5);
             
-            gsap.to('.Home__Slider', {
+            gsap.to('.Home2__Slider', {
                 top: newHeight, 
                 duration: .5, 
                 ease: "power3.out",
