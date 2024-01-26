@@ -26,39 +26,6 @@
             @media screen and (max-width: $max_mobile) {
                 gap: 20vh;
             }
-
-            span{
-                font-size: 16px;
-                font-family: Helvetica;
-                text-transform: uppercase;
-                text-align: center;
-                @media screen and (max-width: $max_mobile) {
-                    font-size: 16px;
-                    
-                }
-            }
-
-            .visitlink{
-                font-family: Helvetica;
-                position: relative;
-
-                &:before{
-                    content: '';
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                    bottom: -4px;
-                    left: 50%;
-                    height: 1px ;
-                    width: 0%;
-                    background-color: $white;
-                    transition: all 300ms cubic-bezier(.72,0,.23,1);
-                }
-                &:hover{
-                    &:before{
-                        width: 100%;
-                    }
-                }
-            }
             h1{
                 position: absolute;
                 bottom: 0;
@@ -84,7 +51,7 @@
         padding: calc(100vw/12) calc((100vw/12));
         background-color: $background;
         display: flex;
-        height: 100vh;
+        height: 80vh;
 
        
         @media screen and (max-width: $max_mobile) {
@@ -95,14 +62,18 @@
         &__text{
             width: calc(7*(100vw/12));
             p{
-                font-family: Helvetica;
-                color: $white;
-                font-size: 24px;
+                
                 width: 100%;
                 @media screen and (max-width: $max_mobile) {
                     width: 100%;
                     font-size: 16px;
                     margin-bottom: 0;
+                }
+
+                .char{
+                    font-family: Helvetica;
+                    color: $white;
+                    font-size: 32px;
                 }
             }
         }
@@ -113,7 +84,7 @@
                 font-family: Helvetica;
                 color: $white;
                 opacity: .5;
-                font-size: 16px;
+                font-size: 14px;
                 width: 100%;
                 @media screen and (max-width: $max_mobile) {
                     width: 100%;
@@ -121,52 +92,34 @@
                     margin-bottom: 0;
                 }
             }
-        }
-
-        
+        } 
     }
 
-    &__next{
-        scroll-snap-align: start;
-        height: 100vh;
-        background-color: $background;
+    &__gallery{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        position: relative;
+        gap: $baseUnit;
+        background-color: $background;
 
-        
+        &__container{
+            width: calc(10*(100vw/12));
+            height: 80vh;
 
-        p{
-            overflow: hidden;
-            position: absolute;
-            top: 25.5%;
-            left: 30%;
-            color: $white;
-            font-family: Helvetica;
-            text-transform: uppercase;
-            font-size: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
-        p:nth-child(2) {
-            transform: translateX(-100%);
-            top: 73%;
-            left: 70%;
-        }
+        &__containerdouble{
+            display: flex;
+            gap: $baseUnit;
 
-        &__content{
-            height: 40%;
-            width: 40%;
-            background-color: $background;
-            cursor: pointer;
-            background-image: url('https://images.unsplash.com/photo-1463171515643-952cee54d42a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-
-            @media screen and (max-width: $max_mobile) {
-                width: 70%;
+            div{
+                width: 50%;
+                height: 100%;
             }
         }
     }

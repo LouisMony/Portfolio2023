@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../../style/Work.scss'
 
-//STYLE
+//COMPOSANT
 import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
+import Gallery from './Gallery';
+
 
 //JS
 import { initLenis, fixHeight } from './helper/helper';
@@ -48,6 +50,9 @@ const Work = (props) => {
                     <TitleWork title={props.projectName}></TitleWork>
                 </div>
             </div>
+            <div className='work__spacer'></div>
+            <DescriptionWork textContent={props.paraA} label={'Context'} />
+            <Gallery />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
         </div>
