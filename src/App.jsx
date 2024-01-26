@@ -2,6 +2,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { projectsData } from './js/worklist';
+
 //COMP
 import Home from './pages/Home';
 import Homev2 from './pages/HomeV2';
@@ -17,9 +18,11 @@ import ComponentTransi from './components/ComponentTransi';
 //STYLE 
 import './index.scss';
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //jS 
 import importAll from './js/loadImages';
+
 
 
 
@@ -59,21 +62,7 @@ function App(){
       }
     },[showAbout])
       
-    // const LoadImgInCach = async (srcArray) => { 
-    //   console.log('start loading');
-    //   const promises = await srcArray.map((src) => { 
-    //     console.log(src);
-    //     return new Promise(function (resolve, reject) { 
-    //       const img = new Image();
-    //       img.src = src;
-    //       img.onload = resolve();
-    //       img.onerror = reject();
-    //     });
-    //   });
-    //   await Promise.all(promises);
-    //   console.log('end Loading');
-    //   setIsLoading (false);
-    // }
+
 
     useEffect(() => {
       const allImages = [
@@ -150,19 +139,17 @@ function App(){
           :
           <div>
             <Component__Header toggleAboutFunction={toggleAbout}/>
-            <Component__Footer />
+            {location.pathname === "/hometest" ? <Component__Footer /> : null}
             <ComponentTransi />
             <Component__Cursor />
             {showLoader && location.pathname === '/' ? <Component__Loader toggleLoader={toggleLoader} /> : null }
             {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
             <Routes location={location} key={location.pathname}>
-              {/* <Route index element={<Home/>} /> */}
               <Route path={'hometest'} element={<Homev2/>} />
               {projectsData.map((project, index) => (
                 <Route key={index} path={project.path} element={<Work {...project.data} />}/>
               ))}
-
             </Routes>
           </div>
         }

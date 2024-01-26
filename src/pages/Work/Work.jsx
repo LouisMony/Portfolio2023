@@ -10,6 +10,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import HandleCursorAnimation from '../../js/HandleCursorAnimation';
 import { HandleWorkAnimation } from '../../js/HandleWorkAnimation';
 import TitleWork from './TitleWork';
+import DescriptionWork from './DescriptionWork';
 
 const Work = (props) => {
     const naviguate = useNavigate()
@@ -126,7 +127,7 @@ const Work = (props) => {
                 </div>
             </div>
             <div className='work__spacer'></div>
-            <div className='work__content'>
+            {/* <div className='work__content'>
                 <div className='work__content__blocsolo'>
                     <div className='work__content__blocsolo__item'>
                         <img className='work__content__blocsolo__item__img displayed' src={activeImageLink} alt="Image du Projet" />
@@ -134,23 +135,16 @@ const Work = (props) => {
                     </div>
                 </div>
                 <Component__SelectPic directory={props.directory} handleChangeImage={handleChangeImage} />
-            </div>
-            <div className='work__desc'>
-                <div className='work__desc__text'>
-                    <p className='JsBasicP'>{props.paraA}</p>
-                </div>
-                <div className='work__desc__text'>
-                    <p className='JsBasicP'>{props.paraB}</p>
-                </div>
-                
-            </div>
-            <div className='work__next'>
+            </div> */}
+            <DescriptionWork paraA={props.paraA} paraB={props.paraB} />
+
+            {/* <div className='work__next'>
                 <p className='work__next__p'>Next Work</p>
                 <p className='work__next__p'>{props.linkname}</p>
                 <div className='work__next__content animEnter link_cursor' onClick={handleNextProject} style={{
                     backgroundImage: `url('/media/work/${props.link}/banner.jpg')`
                 }}></div>
-            </div>
+            </div> */}
         </div>
     )
 }

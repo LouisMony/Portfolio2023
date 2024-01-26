@@ -32,14 +32,9 @@ const Component__Cursor = () => {
 
     return (
         <div>
-            {location.pathname === "/hometest" ? 
-                <div ref={cursorRef} className="cursorhome">
-                    <img src="./media/arrow.svg" alt="Flèche" className={`arrow ${isUpperHalf === true ? 'arrowreverse' : ''}`} />
-                </div>
-            : 
-                <div ref={cursorRef} className="cursor">
-                </div>
-            }
+            <div ref={cursorRef} className={`cursor ${location.pathname === "/hometest" ? 'cursorhome' : ''}`}>
+                {location.pathname === "/hometest" ? <img src="./media/arrow.svg" alt="Flèche" className={`arrow ${isUpperHalf === true ? 'arrowreverse' : ''}`} /> : null}
+            </div>
         </div>
     )
 }

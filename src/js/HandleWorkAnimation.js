@@ -21,10 +21,6 @@ export function HandleWorkAnimation(isMobile){
         gsap.fromTo(item,{clipPath:"polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",opacity:0},{scrollTrigger:{trigger: ".work__content__blocsolo", start: 'top 20%', end: '0px center'}, delay: nextdelay,opacity:1, duration: 1, ease: "power3.out",clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"})
     })
 
-    document.querySelectorAll(".JsBasicP").forEach(item=>{
-        gsap.fromTo(item,{y:100, opacity:0},{scrollTrigger:{trigger: item, start: 'top bottom', end: 'top top', scrub: .5},duration: 1.5, opacity:1, y:0})
-    })
-
     gsap.fromTo('.work__next__content',{height: "0%"},{scrollTrigger:{trigger: ".work__next__content", scrub: .5, start: 'top bottom'},height: "60%"})
     if(isMobile === true){
         gsap.fromTo('.work__next__p',{opacity: 0, xPercent: 100},{scrollTrigger:{trigger: ".work__next__content", scrub: .5, start: 'top bottom'},opacity: 1, xPercent: -30})

@@ -11,6 +11,7 @@
     z-index: 29000;
     background-color: $white;
     mix-blend-mode: difference;
+    transition: all 200ms linear;
 
     @media screen and (max-width: $max_tablette) {
         display: none;

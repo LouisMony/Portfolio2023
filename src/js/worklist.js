@@ -10,7 +10,7 @@ export const worklist = [
     {
       id: 1,
       date: "10.2022",
-      name: "AIDES Campaign 2022",
+      name: "AIDES Campaign",
       link: "aides", 
       type: "Professional",
       background : '/media/work/aides/banner.jpg'
@@ -18,7 +18,7 @@ export const worklist = [
     {
       id: 2,
       date: "09.2023",
-      name: "Prime Prono App",
+      name: "Prime Prono",
       link: "primeprono", 
       type: "Personal",
       background: '/media/work/primeprono/banner.jpg'
@@ -26,7 +26,7 @@ export const worklist = [
     {
       id: 3,
       date: "11.2023",
-      name: "Rolland Games Web App",
+      name: "Rolland Games",
       link: "rolland", 
       type: "Personal",
       background: '/media/work/rolland/banner.jpg'
@@ -34,7 +34,7 @@ export const worklist = [
     {
       id: 4,
       date: "01.2023",
-      name: "Event App",
+      name: "Event",
       link: "eventapp", 
       type: "School",
       background : '/media/work/eventapp/banner.jpg'
@@ -42,7 +42,7 @@ export const worklist = [
     {
       id: 5,
       date: "10.2021",
-      name: "Eqlips Music Web App",
+      name: "Eqlips Music",
       link: "eqlips", 
       type: "Personal",
       background : '/media/work/eqlips/banner.jpg'
@@ -131,7 +131,7 @@ export const projectsData = [
       date: "10.2021",
       type: "Personal",
       stack: "Webdesign- Javascript Vanilla - Airtable",
-      projectName: "Eqlips",
+      projectName: "Eqlips Music",
       demolink: "https://eqlips-steaming.netlify.app/",
       directory: 'eqlips',
       paraA: "Eqlips Streaming is a streaming platform dedicated to the Eqlips producers' collective. Each member can publish their tracks on the platform and listen to other producers' tracks for free. The project's goal was to create a space for producers to share their music and expand the collective to a wider audience.",
