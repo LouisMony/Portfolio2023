@@ -52,11 +52,22 @@
         background-color: $background;
         display: flex;
         height: 80vh;
+        position: relative;
 
        
         @media screen and (max-width: $max_mobile) {
             justify-content: center;
             gap: calc(2*$baseUnit)
+        }
+
+        &__line{
+            top: 40px;
+            left: calc((100vw/12));
+            width: calc(10*(100vw/12));
+            position: absolute;
+            height: 1px;
+            opacity: .5;
+            background-color: $white;
         }
 
         &__text{
@@ -84,7 +95,7 @@
                 font-family: Helvetica;
                 color: $white;
                 opacity: .5;
-                font-size: 14px;
+                font-size: 18px;
                 width: 100%;
                 @media screen and (max-width: $max_mobile) {
                     width: 100%;

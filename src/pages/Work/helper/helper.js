@@ -3,14 +3,12 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const initLenis = () =>{
-    const lenis = new Lenis({
-        duration: 2
-    })
+    const lenis = new Lenis({})
 
     lenis.on('scroll', ScrollTrigger.update)
 
     gsap.ticker.add((time)=>{
-    lenis.raf(time * 1000)
+        lenis.raf(time * 1000)
     })
 
     gsap.ticker.lagSmoothing(0)

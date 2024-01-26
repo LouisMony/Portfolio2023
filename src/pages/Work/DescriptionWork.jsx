@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 
 const DescriptionWork = (props) => {
+    const lineRef = useRef(null)
     useEffect(()=>{
         if(props.textContent && props.label){
             initParaAnimation()
@@ -29,9 +30,12 @@ const DescriptionWork = (props) => {
                 stagger: 0.3
             })
         })
+
+
     }
     return (
         <div className='work__desc'>
+            <div className='work__desc__line'></div>
             <div className='work__desc__label'>
                 <p>{props.label} :</p>
             </div>
