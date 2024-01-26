@@ -49,7 +49,7 @@ const Work = (props) => {
                 </div>
             </div>
             <div className='work__spacer'></div>
-            <DescriptionWork paraA={props.paraA} paraB={props.paraB} />
+            <DescriptionWork textContent={props.paraA} label={'Context'} />
         </div>
     )
 }

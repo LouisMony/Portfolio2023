@@ -52,7 +52,7 @@ const Slider = (props) => {
             
             gsap.to('.Home2__Slider', {
                 top: newHeight, 
-                duration: .5, 
+                duration: .75, 
                 ease: "power3.out", 
                 onComplete: () => {
                     animIsRunning = false
@@ -74,7 +74,7 @@ const Slider = (props) => {
             
             gsap.to('.Home2__Slider', {
                 top: newHeight, 
-                duration: .5, 
+                duration: .75, 
                 ease: "power3.out",
                 onComplete: () => {
                     animIsRunning = false

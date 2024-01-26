@@ -6,7 +6,7 @@ import SplitType from 'split-type'
 const DescriptionWork = (props) => {
     useEffect(()=>{
         if(props.paraA && props.paraB){
-            initParaAnimation()
+            //initParaAnimation()
         }
     },[props.paraA, props.paraB])
 
@@ -32,11 +32,11 @@ const DescriptionWork = (props) => {
     }
     return (
         <div className='work__desc'>
-            <div className='work__desc__text'>
-                <p className='JsBasicP'>{props.paraA}</p>
+            <div className='work__desc__label'>
+                <p className='JsBasicP'>{props.label} :</p>
             </div>
             <div className='work__desc__text'>
-                <p className='JsBasicP'>{props.paraB}</p>
+                <p className='JsBasicP'>{props.textContent}</p>
             </div>
         </div>
     )
