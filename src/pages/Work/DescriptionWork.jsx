@@ -25,10 +25,8 @@ const DescriptionWork = (props) => {
                     scrub: true,
                     markers: false
                 },
-                scaleY: 0,
-                y: -20,
-                transformOrigin: 'top',
-                stagger: 0.1
+                opacity: 0.2,
+                stagger: 0.3
             })
         })
     }

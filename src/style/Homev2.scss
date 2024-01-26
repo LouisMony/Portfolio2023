@@ -31,6 +31,10 @@
                 opacity: 1;
                 transition: all 200ms linear;
                 filter: brightness(.25);
+
+                &:hover{
+                    width: 130%;
+                }
             }
         }
 

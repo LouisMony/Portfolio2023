@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import '../style/Style__HeaderFooter.scss'
 import { handleTransi } from '../js/handleTransi'
 
@@ -8,8 +8,8 @@ const Component__Header = ({ toggleAboutFunction }) => {
   const location = useLocation()
 
   const checkLocation = () => {
-    if (location.pathname !== '/hometest') {
-      handleTransi(naviguate, '/hometest')
+    if (location.pathname !== '/') {
+      handleTransi(naviguate, '/')
     }
   }
 

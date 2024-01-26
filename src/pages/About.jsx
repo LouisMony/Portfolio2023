@@ -56,7 +56,7 @@ function About(props){
         <div className="About__content">
           <span className="close" onClick={handleClose}>CLOSE</span>
           <h2 className="gsapH1About">Louis Mony</h2>
-          <div className="Gsap_container"><p className="gsapAboutItem">French front-end developper based in Paris</p></div>
+          <div className="Gsap_container"><p className="gsapAboutItem">French front-end developper & webdesigner based in Paris</p></div>
 
           <div className="lineAbout"></div>
 

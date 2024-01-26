@@ -5,14 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { router } from './Routes/Routes';
+import { RouterProvider } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <Routes>
-      <Route path='/*' element={<App/>} />
-    </Routes>
-  </Router>
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import '../style/Homev2.scss'
+import '../../style/Homev2.scss'
 import { useNavigate } from "react-router-dom";
-import { handleTransi } from "../js/handleTransi";
+import { handleTransi } from "../../js/handleTransi";
 
 //COMPOSANT
-import Slider from "./Home/Slider";
-import Title from "./Home/Title";
-import ScrollScooter from "./Home/ScrollScooter";
-import { worklist } from "../js/worklist";
+import Slider from "./Slider";
+import Title from "./Title";
+import ScrollScooter from "./ScrollScooter";
+import { worklist } from "../../js/worklist";
 
 
-function Homev2(){
+function Home(){
     const sliderItems = worklist
 
     const naviguate = useNavigate()
@@ -51,4 +51,4 @@ function Homev2(){
     );
   }
   
-  export default Homev2;
+  export default Home;

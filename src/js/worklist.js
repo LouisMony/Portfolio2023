@@ -51,7 +51,7 @@ export const worklist = [
 
 export const projectsData = [
   {
-    path: '/work/kia',
+    path: 'work/kia',
     data: {
       date: "04.2023",
       type: "Professional",
@@ -66,7 +66,7 @@ export const projectsData = [
     },
   },
   {
-    path: '/work/aides',
+    path: 'work/aides',
     data: {
       date: "10.2022",
       type: "Professional",
@@ -81,7 +81,7 @@ export const projectsData = [
     },
   },
   {
-    path: '/work/primeprono',
+    path: 'work/primeprono',
     data: {
       date: "11.2023",
       type: "Personal",
@@ -96,7 +96,7 @@ export const projectsData = [
     },
   },
   {
-    path: '/work/rolland',
+    path: 'work/rolland',
     data: {
       date: "11.2023",
       type: "Personal",
@@ -111,7 +111,7 @@ export const projectsData = [
     },
   },
   {
-    path: '/work/eventapp',
+    path: 'work/eventapp',
     data: {
       date: "01.2023",
       type: "School",
@@ -126,7 +126,7 @@ export const projectsData = [
     },
   },
   {
-    path: '/work/eqlips',
+    path: 'work/eqlips',
     data: {
       date: "10.2021",
       type: "Personal",

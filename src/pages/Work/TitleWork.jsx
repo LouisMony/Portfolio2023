@@ -9,7 +9,7 @@ const TitleWork = (props) => {
 
     const initAnim = () =>{
         const splitedTitle = new SplitType('#js_splitedTitle', { charClass: 'charTitleWork' })
-        gsap.fromTo('.charTitleWork',{opacity: 0, clipPath:"polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", yPercent: 50}, {opacity: 1, clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", yPercent: 0,duration: 1.5, stagger: .01,ease: "power4.out", delay: .5})
+        gsap.fromTo('.charTitleWork',{clipPath:"polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", yPercent: 50}, {clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", yPercent: 0,duration: 1.5, stagger: .01,ease: "power4.out", delay: .5})
     }
 
     return (
