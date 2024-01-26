@@ -1,15 +1,22 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 
 const DescriptionWork = (props) => {
-    const lineRef = useRef(null)
+
+    const [stacks, setStacks] = useState(null)
+    
     useEffect(()=>{
         if(props.textContent && props.label){
+            console.log(typeof(props.label), props.label);
             initParaAnimation()
         }
     },[props.paraA, props.paraB])
+
+    useEffect(() =>{
+        
+    })
 
     const initParaAnimation = () =>{
         gsap.registerPlugin(ScrollTrigger)
@@ -37,7 +44,10 @@ const DescriptionWork = (props) => {
         <div className='work__desc'>
             <div className='work__desc__line'></div>
             <div className='work__desc__label'>
-                <p>{props.label} :</p>
+                {stacks && stacks.map((item, index) => (
+                    <p key={index}>{item}</p>
+                ))}
+                
             </div>
             <div className='work__desc__text'>
                 <p className='JsBasicP'>{props.textContent}</p>

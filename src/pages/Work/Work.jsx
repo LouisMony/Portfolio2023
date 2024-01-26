@@ -5,6 +5,7 @@ import '../../style/Work.scss'
 import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
 import Gallery from './Gallery';
+import VisitButton from './VisitButton';
 
 
 //JS
@@ -51,10 +52,12 @@ const Work = (props) => {
                 </div>
             </div>
             <div className='work__spacer'></div>
-            <DescriptionWork textContent={props.paraA} label={'Context'} />
+            <DescriptionWork textContent={props.paraA} label={props.stack} />
             <Gallery />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
+            <VisitButton textContent={'View'} />
+            <div className='work__spacer'></div>
         </div>
     )
 }

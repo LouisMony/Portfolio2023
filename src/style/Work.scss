@@ -51,7 +51,7 @@
         padding: calc(100vw/12) calc((100vw/12));
         background-color: $background;
         display: flex;
-        height: 80vh;
+        height: 60vh;
         position: relative;
 
        
@@ -132,6 +132,25 @@
                 width: 50%;
                 height: 100%;
             }
+        }
+    }
+
+    &__visit{
+        background-color: $background;
+        display: flex;
+        justify-content: center;
+
+        a{
+            width: 150px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: $white;
+            font-family: Helvetica, sans-serif;
+            font-size: 20px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
