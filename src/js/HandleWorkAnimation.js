@@ -4,24 +4,12 @@ import SplitType from "split-type";
 
 export function HandleWorkAnimation(isMobile){
     window.scrollTo(0, 0)
-    const MyTitle = new SplitType('.gsapSplit', { charClass: 'charTitle' })
     
     gsap.registerPlugin(ScrollTrigger)
 
     let nextStart = 0
     if(isMobile === true){
         gsap.to('.work',{scrollTrigger:{trigger: ".work__banner", scrub: .5, start: '0px top', end: 'bottom top'},backgroundPositionY: "60%"})
-        
-        gsap.to('.gsapSplit',{scrollTrigger:{trigger: ".work__banner", scrub: 1, start: '0 top', end: '100% top'},height
-        : "200vh", translateY: "15vh"})
-
-        document.querySelectorAll(".charTitle").forEach(item=>{
-            nextStart = nextStart + 15
-            let newStart = nextStart+"px"
-            gsap.to(item,{scrollTrigger:{trigger: ".work__banner", scrub: 1, start: ''+newStart+'top', end: '100% top'},translateY: "77vh"})
-        })
-        
-
         gsap.fromTo('.gspScnd',{opacity: 1, height: "40px"},{scrollTrigger:{trigger: ".work__banner", scrub: .5, start: '0px top', end: '100px top'},opacity: 0, height: "0px"})
     }
     
@@ -44,8 +32,5 @@ export function HandleWorkAnimation(isMobile){
     gsap.to('.work', {backgroundSize: "cover",duration: 1.5, delay: 0.3, ease: "power4.inOut"})
     gsap.fromTo('.work__banner__content',{opacity: 0}, {opacity: 1,duration: 1, ease: "power1.inOut"})
     gsap.fromTo('.gspScnd',{yPercent: -70, opacity: 0}, {yPercent:0, opacity: 1, stagger: 0.015,duration: 1, ease: "power3.inOut", delay: 1})
-    
-    
-    gsap.fromTo('.charTitle',{yPercent: 100}, {yPercent:0,duration: 2,stagger: 0.03, delay:0, ease: "power4.inOut"})
 
 }

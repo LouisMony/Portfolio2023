@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
-import '../style/Work.scss';
+import '../../style/Work.scss';
 import { Link, useNavigate } from 'react-router-dom';
-import Component__SelectPic from '../components/Component__SelectPic';
-import Component__ScrollScooter from '../components/Component__ScrollScooter';
+import Component__SelectPic from '../../components/Component__SelectPic';
 
 //STYLE
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import HandleCursorAnimation from '../js/HandleCursorAnimation';
-import { HandleWorkAnimation } from '../js/HandleWorkAnimation';
+import HandleCursorAnimation from '../../js/HandleCursorAnimation';
+import { HandleWorkAnimation } from '../../js/HandleWorkAnimation';
+import TitleWork from './TitleWork';
 
 const Work = (props) => {
     const naviguate = useNavigate()
@@ -117,12 +117,12 @@ const Work = (props) => {
         <div className='work gsapMain' style={{
             backgroundImage: `url('/media/work/${props.directory}/banner.jpg')`
           }}>
-            <Component__ScrollScooter />
+            {/* <Component__ScrollScooter /> */}
             <div className='work__banner'>
                 <div className='work__banner__content' >
-                    <span className='gspScnd'>{props.date} - {props.type} <br/>{props.stack}</span>
-                    <h1 className='gsapSplit'>{props.projectName}</h1>
-                    <a target='_blank' href={props.demolink}><span className='gspScnd visitlink'>Visit website</span></a>
+                    {/* <span className='gspScnd'>{props.date} - {props.type} <br/>{props.stack}</span> */}
+                    <TitleWork title={props.projectName}></TitleWork>
+                    {/* <a target='_blank' href={props.demolink}><span className='gspScnd visitlink'>Visit website</span></a> */}
                 </div>
             </div>
             <div className='work__spacer'></div>

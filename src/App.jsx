@@ -5,7 +5,7 @@ import { projectsData } from './js/worklist';
 //COMP
 import Home from './pages/Home';
 import Homev2 from './pages/HomeV2';
-import Work from './pages/Work';
+import Work from './pages/Work/Work';
 import About from './pages/About';
 import Component__Footer from './components/Component__Footer';
 import Component__Header from './components/Component__Header';
