@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
+import VisitButton from './VisitButton';
 
 const DescriptionWork = (props) => {
 

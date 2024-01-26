@@ -7,6 +7,7 @@ const Gallery = () => {
     const initGalleryAnimation = () =>{
         gsap.registerPlugin(ScrollTrigger)
         const imageContainers = document.querySelectorAll('.js_container')
+        const imageItems = document.querySelectorAll('.gallery_image')
 
         imageContainers.forEach(container =>{
             gsap.fromTo(container, {
@@ -27,6 +28,26 @@ const Gallery = () => {
                 clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             })
         })
+
+        imageItems.forEach(item =>{
+          gsap.fromTo(item, {
+                  width: "130%",
+                  height: "130%"
+              },
+              {
+              scrollTrigger:{
+                  trigger: item,
+                  start: 'top 100%',
+                  end: 'top 0%',
+                  scrub: true,
+                  markers: false
+              },
+              width: "100%",
+              height: "100%"
+          })
+      })
+
+        
     }
 
     useEffect(() =>{

@@ -48,6 +48,7 @@ const Work = (props) => {
           }}>
             <div className='work__banner'>
                 <div className='work__banner__content' >
+                    <VisitButton textContent={'Visit Website'} />
                     <TitleWork title={props.projectName}></TitleWork>
                 </div>
             </div>
@@ -56,7 +57,7 @@ const Work = (props) => {
             <Gallery />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
-            <VisitButton textContent={'View'} />
+            
             <div className='work__spacer'></div>
         </div>
     )
