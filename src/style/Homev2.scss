@@ -67,10 +67,10 @@
         }
 
         .current{
-            // &:hover{
-            //     letter-spacing: 30px;
-            //     margin-right: -30px;
-            // }
+            &:hover{
+                letter-spacing: 30px;
+                margin-right: -30px;
+            }
         }
     }
 

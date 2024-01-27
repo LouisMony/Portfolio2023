@@ -182,10 +182,25 @@
     &__footer{
         background-color: $background;
         color: $white;
-        padding: 0 0 350px 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &__popUp{
+            position: absolute;
+            height: 40vh;
+            transform: translate(-50%, -50%);
+            aspect-ratio: 9/12;
+            background-color: rgb(65, 65, 65);
+            z-index: 10;
+        }
 
         &__hover{
+            z-index: 100;
             cursor: pointer;
+            position: relative;
             margin: auto;
             width: fit-content;
             height: 13vw;
@@ -198,7 +213,22 @@
                 font-family: 'HumaneBold';
                 text-transform: uppercase;
                 font-size: 15vw;
+                transform: translateY(0%);
+                transition: all 500ms cubic-bezier(.15,.77,.29,.92);
             }
+
+            &:hover{
+                p{
+                    transform: translateY(-100%);
+                }
+            }
+        }
+        &__link{
+            position: absolute;
+            left: $baseUnit;
+            bottom: $baseUnit;
+            text-transform: uppercase;
+            font-size: 24px;
         }
     }
 

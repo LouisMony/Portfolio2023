@@ -60,7 +60,6 @@ const Work = (props) => {
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
             {/* <VisitButton textContent={'Visit Website'} /> */}
-            <div className='work__spacer'></div>
             <FooterWork />
         </div>
     )
