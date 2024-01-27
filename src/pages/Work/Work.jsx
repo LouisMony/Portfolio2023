@@ -6,6 +6,7 @@ import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
 import Gallery from './Gallery';
 import VisitButton from './VisitButton';
+import Info from './Info';
 
 
 //JS
@@ -48,7 +49,8 @@ const Work = (props) => {
           }}>
             <div className='work__banner'>
                 <div className='work__banner__content' >
-                    <VisitButton textContent={'Visit Website'} />
+                    
+                    <Info />
                     <TitleWork title={props.projectName}></TitleWork>
                 </div>
             </div>
@@ -57,7 +59,7 @@ const Work = (props) => {
             <Gallery />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
-            
+            <VisitButton textContent={'Visit Website'} />
             <div className='work__spacer'></div>
         </div>
     )

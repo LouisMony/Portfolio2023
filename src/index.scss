@@ -70,22 +70,22 @@
 }
 
 //NOHEMI
-@font-face {
-  font-family: "NohemiB";   /*Can be any text*/
-  src: local('NohemiB'), url("./font/Nohemi/Nohemi-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "NohemiR";   /*Can be any text*/
-  src: local('NohemiR'), url("./font/Nohemi/Nohemi-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "NohemiM";   /*Can be any text*/
-  src: local('NohemiM'), url("./font/Nohemi/Nohemi-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "NohemiT";   /*Can be any text*/
-  src: local('NohemiT'), url("./font/Nohemi/Nohemi-Thin.woff") format("woff");
-}
+// @font-face {
+//   font-family: "NohemiB";   /*Can be any text*/
+//   src: local('NohemiB'), url("./font/Nohemi/Nohemi-Bold.woff") format("woff");
+// }
+// @font-face {
+//   font-family: "NohemiR";   /*Can be any text*/
+//   src: local('NohemiR'), url("./font/Nohemi/Nohemi-Regular.woff") format("woff");
+// }
+// @font-face {
+//   font-family: "NohemiM";   /*Can be any text*/
+//   src: local('NohemiM'), url("./font/Nohemi/Nohemi-Medium.woff") format("woff");
+// }
+// @font-face {
+//   font-family: "NohemiT";   /*Can be any text*/
+//   src: local('NohemiT'), url("./font/Nohemi/Nohemi-Thin.woff") format("woff");
+// }
 //VARIABLE
 
 $baseUnit : 24px;
@@ -100,7 +100,7 @@ $maincolor: #FFE500;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "NohemiR", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; 
 
