@@ -26,10 +26,10 @@ const Title = (props) => {
             gsap.set('.Home2__Title__h2', {
                 translateY: "0%", 
             })
-        }
-
-        
+        } 
     },[currentTitle])
+
+    
     return (
         <div className='Home2__Title' onClick={handleClickTitle}>
             <h2 className='Home2__Title__h2 current'>{currentTitle}</h2>

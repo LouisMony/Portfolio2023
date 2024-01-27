@@ -11,7 +11,7 @@ const DescriptionWork = (props) => {
     useEffect(()=>{
         if(props.textContent && props.label){
             console.log(typeof(props.label), props.label);
-            initParaAnimation()
+            //initParaAnimation()
         }
     },[props.paraA, props.paraB])
 
@@ -24,7 +24,7 @@ const DescriptionWork = (props) => {
         const splitTypes = document.querySelectorAll('.JsBasicP')
 
         splitTypes.forEach((char, i) =>{
-            const text = new SplitType(char, {types: 'chars'})
+            const text = new SplitType(char, {types: 'char'})
 
             gsap.from(text.chars, {
                 scrollTrigger:{

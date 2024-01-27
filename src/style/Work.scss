@@ -18,6 +18,8 @@
         justify-content: center;
         align-items: center;
 
+        
+
         &__content{
             height: 100%;
             width: 100%;
@@ -26,8 +28,50 @@
             @media screen and (max-width: $max_mobile) {
                 gap: 20vh;
             }
+
+            .work__visit{
+                position: absolute;
+                bottom: 35vh;
+                right: 10vw;
+                z-index: 200;
+            }
+
+            &__info{
+                display: flex;
+                gap: $baseUnit;
+                position: absolute;
+                bottom: 42vh;
+                left: 2vw;
+                width: fit-content;
+                overflow: hidden;
+                
+                &__stack, &__date, &__visit {
+                    border: solid 2px $white;
+                    padding: 15px;
+                    border-radius: 30px;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    width: fit-content;
+                }
+
+                &__visit{
+                    background-color: $white;
+                    color: $background;
+                    position: relative;
+                    transition: all 200ms linear;
+        
+                    &:hover{
+                        background-color: rgb(169, 169, 169);
+                        border-color: rgb(169, 169, 169);
+                    }
+                }
+                
+
+            }
+
             h1{
                 position: absolute;
+                z-index: 100;
                 bottom: 0;
                 left: $baseUnit;
                 display: flex;
@@ -156,6 +200,7 @@
             span{
                 z-index: 200;
                 font-family: Helvetica, sans-serif;
+                color: $background;
             }
             &::before{
                 content: '';
