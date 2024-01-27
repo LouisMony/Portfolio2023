@@ -179,6 +179,29 @@
         }
     }
 
+    &__footer{
+        background-color: $background;
+        color: $white;
+        padding: 0 0 350px 0;
+
+        &__hover{
+            cursor: pointer;
+            margin: auto;
+            width: fit-content;
+            height: 13vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p{
+                font-family: 'HumaneBold';
+                text-transform: uppercase;
+                font-size: 15vw;
+            }
+        }
+    }
+
     &__visit{
         display: flex;
         justify-content: center;
@@ -224,8 +247,6 @@
                     opacity: 1;
                 }
             }
-        }
-
-        
+        }   
     }
 }

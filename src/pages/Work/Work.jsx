@@ -5,8 +5,8 @@ import '../../style/Work.scss'
 import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
 import Gallery from './Gallery';
-import VisitButton from './VisitButton';
 import Info from './Info';
+import FooterWork from './FooterWork';
 
 
 //JS
@@ -61,6 +61,7 @@ const Work = (props) => {
             <DescriptionWork textContent={props.paraA} label={'Context'} />
             {/* <VisitButton textContent={'Visit Website'} /> */}
             <div className='work__spacer'></div>
+            <FooterWork />
         </div>
     )
 }
