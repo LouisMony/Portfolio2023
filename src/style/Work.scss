@@ -40,7 +40,7 @@
                 display: flex;
                 gap: $baseUnit;
                 position: absolute;
-                bottom: 42vh;
+                bottom: 25vw;
                 left: 2vw;
                 width: fit-content;
                 overflow: hidden;
@@ -125,7 +125,7 @@
                     margin-bottom: 0;
                 }
 
-                .char{
+                .word{
                     font-family: Helvetica;
                     color: $white;
                     font-size: 32px;

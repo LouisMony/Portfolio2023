@@ -11,7 +11,7 @@ const DescriptionWork = (props) => {
     useEffect(()=>{
         if(props.textContent && props.label){
             console.log(typeof(props.label), props.label);
-            //initParaAnimation()
+            initParaAnimation()
         }
     },[props.paraA, props.paraB])
 
@@ -23,12 +23,12 @@ const DescriptionWork = (props) => {
         gsap.registerPlugin(ScrollTrigger)
         const splitTypes = document.querySelectorAll('.JsBasicP')
 
-        splitTypes.forEach((char, i) =>{
-            const text = new SplitType(char, {types: 'char'})
+        splitTypes.forEach((item) =>{
+            const text = new SplitType(item, {types: 'words'})
 
-            gsap.from(text.chars, {
+            gsap.from(text.words, {
                 scrollTrigger:{
-                    trigger: char,
+                    trigger: item,
                     start: 'top 80%',
                     end: 'top 20%',
                     scrub: true,
@@ -45,9 +45,7 @@ const DescriptionWork = (props) => {
         <div className='work__desc'>
             <div className='work__desc__line'></div>
             <div className='work__desc__label'>
-                {stacks && stacks.map((item, index) => (
-                    <p key={index}>{item}</p>
-                ))}
+                coucou
                 
             </div>
             <div className='work__desc__text'>
