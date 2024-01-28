@@ -7,6 +7,7 @@ export const handleTransi = (naviguate, dest) => {
         const globalEase = 'power3.inOut'
         try {
             transiIsRunning = true
+            
             gsap.fromTo('.Transi',{clipPath:"polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"}, { clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1.2, ease: globalEase, onComplete: () => {
                 
                 gsap.fromTo('.Transi__scnd',{clipPath:"polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"}, { clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1.3, ease: globalEase} )

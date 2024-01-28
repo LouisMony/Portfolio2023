@@ -7,8 +7,8 @@ const Info = (props) => {
     const infoBloc = useRef(null)
 
     useEffect(() =>{
-        if (infoBloc) initAnimationInfo()
-    },[infoBloc])
+        if (infoBloc && props.stack && props.date) initAnimationInfo()
+    },[infoBloc, props.stack, props.date])
 
     const initAnimationInfo = () =>{
         gsap.fromTo('.info__item',{yPercent: 100}, {yPercent: 0,duration: 1, stagger: .1,ease: "power3.out", delay: 1})
