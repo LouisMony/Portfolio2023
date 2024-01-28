@@ -4,9 +4,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 
 const TitleWork = (props) => {
+    
     useEffect(() =>{
-        initAnim()
-    },[])
+        console.log(props.title);
+        if(props.title){
+            initAnim()
+        }
+        
+    },[props.title])
 
     const initAnim = () =>{
         const splitedTitle = new SplitType('#js_splitedTitle', { charClass: 'charTitleWork' })

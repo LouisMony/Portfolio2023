@@ -20,15 +20,7 @@ const Work = (props) => {
         initLenis()
         checkScreenSize()
         fixHeight()
-        //HandleCursorAnimation()
     },[])
-
-    useEffect(()=>{
-        if(isMobile !== null){
-            initAnimWorkPage()
-        }
-    },[isMobile])
-
    
     const checkScreenSize = () =>{
         if (window.matchMedia('(min-width: 768px)').matches) {
@@ -39,9 +31,9 @@ const Work = (props) => {
         }
     }
 
-    const initAnimWorkPage = () =>{
-        //HandleWorkAnimation(isMobile)
-    }
+    useEffect(()=>{
+
+    },[props])
 
     return (
         <div className='work gsapMain' style={{
@@ -49,8 +41,7 @@ const Work = (props) => {
           }}>
             <div className='work__banner'>
                 <div className='work__banner__content' >
-
-                    <Info />
+                    <Info date={props.date} demolink={props.demolink} stack={props.stack} />
                     <TitleWork title={props.projectName}></TitleWork>
                 </div>
             </div>
@@ -60,7 +51,7 @@ const Work = (props) => {
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
             {/* <VisitButton textContent={'Visit Website'} /> */}
-            <FooterWork />
+            <FooterWork nextLink={props.link} textLink={props.linkname}/>
         </div>
     )
 }

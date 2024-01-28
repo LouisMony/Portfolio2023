@@ -16,7 +16,7 @@ const Component__Header = ({ toggleAboutFunction }) => {
   return (
     <div className='header'>
       <span onClick={() => checkLocation()} className='homelink'>
-        Louis Mony - Folio 2023
+        Louis Mony - Folio 2024
       </span>
       <span onClick={toggleAboutFunction} className='homelink'>
         About

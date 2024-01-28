@@ -55,7 +55,7 @@ export const projectsData = [
     data: {
       date: "04.2023",
       type: "Professional",
-      stack: ["Front-end - Vue JS"],
+      stack: "FRONT-END development",
       projectName: "Kia OSB",
       demolink: "https://www.kia.com/fr/services/rendez-vous-atelier/?step=vehicle",
       directory: 'kia',
@@ -70,7 +70,7 @@ export const projectsData = [
     data: {
       date: "10.2022",
       type: "Professional",
-      stack: ["Front-end - Astro JS"],
+      stack: "FRONT-END development",
       projectName: "AIDES Campaign",
       demolink: "https://don.aides.org/",
       directory: 'aides',
@@ -85,7 +85,7 @@ export const projectsData = [
     data: {
       date: "11.2023",
       type: "Personal",
-      stack: ["Webdesign - Figma", "Front-end - React JS Supabase", "Back-end - Express"],
+      stack: "Webdesign - FRONT-END & Back-end development",
       projectName: "Prime Prono",
       demolink: "https://primeprono.netlify.app/",
       directory: 'primeprono',
@@ -100,7 +100,7 @@ export const projectsData = [
     data: {
       date: "11.2023",
       type: "Personal",
-      stack: ["Webdesign - Figma", "Front-end - React JS Supabase", "Back-end - Express"],
+      stack: "Webdesign - FRONT-END & Back-end development",
       projectName: "Rolland games",
       demolink: "https://rollandgames.netlify.app/",
       directory: 'rolland',
@@ -115,7 +115,7 @@ export const projectsData = [
     data: {
       date: "01.2023",
       type: "School",
-      stack: ["Webdesign - Figma", "Front-end - Vue JS Airtable"],
+      stack: "Webdesign - FRONT-END development",
       projectName: "Event App",
       demolink: "https://events-lesfousduroy.netlify.app/me-connecter",
       directory: 'eventapp',
@@ -130,7 +130,7 @@ export const projectsData = [
     data: {
       date: "10.2021",
       type: "Personal",
-      stack: ["Webdesign - Figma", "Front-end - HTML/CSS/JS Vanilla"],
+      stack: "Webdesign - FRONT-END development",
       projectName: "Eqlips Music",
       demolink: "https://eqlips-steaming.netlify.app/",
       directory: 'eqlips',

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { handleTransi } from '../../js/handleTransi';
 
-const FooterWork = () => {
+const FooterWork = (props) => {
     const [popUpBloc, setPopUpBloc] = useState([]);
     const naviguate = useNavigate();
     const [intervalId, setIntervalId] = useState(null);
@@ -50,9 +50,9 @@ const FooterWork = () => {
 
     return (
         <div className='work__footer'>
-            <div className='work__footer__hover' onClick={() => handleTransi(naviguate, '/')} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className='work__footer__hover' onClick={() => handleTransi(naviguate, '/work/'+props.nextLink)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <p>Next Project</p>
-                <p className='work__footer__hover__name'>Aides campaign</p>
+                <p className='work__footer__hover__name'>{props.textLink}</p>
             </div>
 
             {popUpBloc.map(popUp => popUp)}

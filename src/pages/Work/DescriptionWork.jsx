@@ -10,10 +10,9 @@ const DescriptionWork = (props) => {
     
     useEffect(()=>{
         if(props.textContent && props.label){
-            console.log(typeof(props.label), props.label);
             initParaAnimation()
         }
-    },[props.paraA, props.paraB])
+    },[props.textContent, props.label])
 
     useEffect(() =>{
         

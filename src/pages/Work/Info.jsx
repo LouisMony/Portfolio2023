@@ -7,7 +7,7 @@ const Info = (props) => {
     const infoBloc = useRef(null)
 
     useEffect(() =>{
-        if (infoBloc)initAnimationInfo()
+        if (infoBloc) initAnimationInfo()
     },[infoBloc])
 
     const initAnimationInfo = () =>{
@@ -34,9 +34,9 @@ const Info = (props) => {
     }
     return (
         <div ref={infoBloc} className='work__banner__content__info'>
-            <div className='work__banner__content__info__stack info__item'>WebDesign - Front-end Development</div>
-            <div className='work__banner__content__info__date info__item'>01. 2024</div>
-            <div className='work__banner__content__info__visit info__item'><a href="#">View Project</a></div>
+            <div className='work__banner__content__info__stack info__item'>{props.stack}</div>
+            <div className='work__banner__content__info__date info__item'>{props.date}</div>
+            <div className='work__banner__content__info__visit info__item'><a target='_blanck' href={props.demolink}>View Project</a></div>
         </div>
     )
 }

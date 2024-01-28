@@ -11,9 +11,11 @@
     justify-content: center;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 
-    img{
-        filter: invert(1);
-        width: 20%;
+    p{
+       color: $background;
+       font-size: 12px;
+       text-transform: uppercase;
+       text-align: center;
     }
 
     &__scnd{
