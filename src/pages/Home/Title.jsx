@@ -31,7 +31,7 @@ const Title = (props) => {
 
     
     return (
-        <div className='Home2__Title' onClick={handleClickTitle}>
+        <div className='Home2__Title js_hoverable' onClick={handleClickTitle}>
             <h2 className='Home2__Title__h2 current'>{currentTitle}</h2>
             <h2 className='Home2__Title__h2 next'>{props.title}</h2>
         </div>
