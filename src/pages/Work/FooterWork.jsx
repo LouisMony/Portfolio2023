@@ -56,10 +56,6 @@ const FooterWork = (props) => {
             </div>
 
             {popUpBloc.map(popUp => popUp)}
-
-            <a className='work__footer__link' href="mailto:louis.mony2@gmail.com">
-                <span>Contact ME</span>
-            </a>
         </div>
     );
 };
