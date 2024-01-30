@@ -3,31 +3,20 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 import VisitButton from './VisitButton';
+import { useGSAP } from '@gsap/react';
 
 const DescriptionWork = (props) => {
+    const textContainerRef = useRef(null)
+    const textRef = useRef(null)
 
-    const [stacks, setStacks] = useState(null)
-    
-    useEffect(()=>{
-        if(props.textContent && props.label){
-            initParaAnimation()
-        }
-    },[props.textContent, props.label])
-
-    useEffect(() =>{
-        
-    })
-
-    const initParaAnimation = () =>{
-        gsap.registerPlugin(ScrollTrigger)
-        const splitTypes = document.querySelectorAll('.JsBasicP')
-
-        splitTypes.forEach((item) =>{
-            const text = new SplitType(item, {types: 'words'})
+    useGSAP(() => {
+        if(props.textContent && props.label && textRef && textContainerRef){
+            gsap.registerPlugin(ScrollTrigger)
+            const text = new SplitType(textRef.current, {types: 'words'})
 
             gsap.from(text.words, {
                 scrollTrigger:{
-                    trigger: item,
+                    trigger: textContainerRef.current,
                     start: 'top 80%',
                     end: 'top 20%',
                     scrub: true,
@@ -36,19 +25,18 @@ const DescriptionWork = (props) => {
                 opacity: .2,
                 stagger: 0.3
             })
-        })
+        }
+    }, { dependencies: [props.textContent, props.label, textContainerRef, textRef], scope: textContainerRef});
 
-
-    }
     return (
-        <div className='work__desc'>
+        <div className='work__desc' ref={textContainerRef}>
             <div className='work__desc__line'></div>
             <div className='work__desc__label'>
                 <p>Context : </p>
                 
             </div>
             <div className='work__desc__text'>
-                <p className='JsBasicP'>{props.textContent}</p>
+                <p ref={textRef} className='JsBasicP'>{props.textContent}</p>
             </div>
         </div>
     )
