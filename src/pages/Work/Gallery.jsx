@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Magnetic from '../../components/Magnetic'
 
-const Gallery = () => {
+const Gallery = (props) => {
 
     const initGalleryAnimation = () =>{
         gsap.registerPlugin(ScrollTrigger)
@@ -60,19 +60,18 @@ const Gallery = () => {
   return (
     <div className='work__gallery'>
       <div className='work__gallery__container js_container'>
-        
-        <img className='gallery_image' src='https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='photo du porjet' />
+          <img className='gallery_image' src={`/media/work/${props.directory}/mockup_A.webp`} alt="Vignette" />
       </div>
       <div className='work__gallery__container  work__gallery__containerdouble '>
         <div className='js_container'>        
-            <img className='gallery_image' src='https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='photo du porjet' />
+            <img className='gallery_image' src={`/media/work/${props.directory}/mockup_B.webp`} alt="Vignette" />
         </div>
         <div className='js_container'>        
-            <img className='gallery_image' src='https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='photo du porjet' />
+            <img className='gallery_image' src={`/media/work/${props.directory}/mockup_C.webp`} alt="Vignette" />
         </div>
       </div>
       <div className='work__gallery__container js_container'>
-            <img className='gallery_image' src='https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='photo du porjet' />
+          <img className='gallery_image' src={`/media/work/${props.directory}/mockup_D.webp`} alt="Vignette" />
       </div>
     </div>
   )

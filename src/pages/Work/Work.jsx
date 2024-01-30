@@ -47,7 +47,7 @@ const Work = (props) => {
             </div>
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={props.stack} />
-            <Gallery />
+            <Gallery directory={props.directory} />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
             {/* <VisitButton textContent={'Visit Website'} /> */}

@@ -44,7 +44,7 @@ const DescriptionWork = (props) => {
         <div className='work__desc'>
             <div className='work__desc__line'></div>
             <div className='work__desc__label'>
-                coucou
+                <p>Context : </p>
                 
             </div>
             <div className='work__desc__text'>
