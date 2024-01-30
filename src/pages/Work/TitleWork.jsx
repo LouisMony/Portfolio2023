@@ -19,7 +19,6 @@ const TitleWork = (props) => {
     }, [props.title]);
 
     useGSAP(() => {
-        console.log('laucnh');
         if (titleRef.current) {
             gsap.registerPlugin(ScrollTrigger);
             const splitedTitle = new SplitType(titleRef.current, { charClass: 'charTitleWork' });

@@ -9,8 +9,22 @@ const DescriptionWork = (props) => {
     const textContainerRef = useRef(null)
     const textRef = useRef(null)
 
+    const [triggerAnimTitle, setTriggerAnimTitle] = useState(false)
+
+    useEffect(() => {
+        if (textRef.current && props.textContent) {
+            const newTextElement = document.createElement('p');
+            newTextElement.classList.add('JsBasicP')
+            newTextElement.textContent = props.textContent;
+            textRef.current.parentNode.replaceChild(newTextElement, textRef.current);
+            textRef.current = newTextElement;
+            
+            setTriggerAnimTitle(!triggerAnimTitle)
+        }
+    }, [props.textContent]);
+
     useGSAP(() => {
-        if(props.textContent && props.label && textRef && textContainerRef){
+        if(textRef.current){
             gsap.registerPlugin(ScrollTrigger)
             const text = new SplitType(textRef.current, {types: 'words'})
 
@@ -26,7 +40,7 @@ const DescriptionWork = (props) => {
                 stagger: 0.3
             })
         }
-    }, { dependencies: [props.textContent, props.label, textContainerRef, textRef], scope: textContainerRef});
+    }, { dependencies: [triggerAnimTitle], scope: textContainerRef});
 
     return (
         <div className='work__desc' ref={textContainerRef}>
