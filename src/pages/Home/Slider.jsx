@@ -84,13 +84,6 @@ const Slider = (props) => {
         }
     }
 
-    useEffect(()=>{
-        
-        gsap.from('.Home2__Slider__Item',{y:200, duration: .5, stagger: 0.2, ease:"power3.out"})
-        
-    },[])
-
-
     return (
         <div ref={SliderRef} className='Home2__Slider'>
             {props.sliderItems && props.sliderItems.map((item, index) => (

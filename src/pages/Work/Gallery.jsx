@@ -12,7 +12,6 @@ const Gallery = (props) => {
       gsap.fromTo('.work__gallery__container', {
         y: 200,
         opacity: 0,
-        transformOrigin: "left",
         clipPath:"polygon(0% 50%, 100% 100%, 100% 100%, 0% 100%)",
       },
       {
@@ -24,7 +23,6 @@ const Gallery = (props) => {
             markers: false
         },
         y: 0,
-        transformOrigin: "left",
         opacity: 1,
         clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       })

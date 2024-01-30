@@ -51,7 +51,7 @@ const Work = (props) => {
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
             {/* <VisitButton textContent={'Visit Website'} /> */}
-            <FooterWork nextLink={props.link} textLink={props.linkname}/>
+            <FooterWork directory={props.directory} nextLink={props.link} textLink={props.linkname}/>
         </div>
     )
 }
