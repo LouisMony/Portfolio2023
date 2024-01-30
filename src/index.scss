@@ -69,28 +69,13 @@
   text-rendering: optimizeLegibility;
 }
 
-//NOHEMI
-// @font-face {
-//   font-family: "NohemiB";   /*Can be any text*/
-//   src: local('NohemiB'), url("./font/Nohemi/Nohemi-Bold.woff") format("woff");
-// }
-// @font-face {
-//   font-family: "NohemiR";   /*Can be any text*/
-//   src: local('NohemiR'), url("./font/Nohemi/Nohemi-Regular.woff") format("woff");
-// }
-// @font-face {
-//   font-family: "NohemiM";   /*Can be any text*/
-//   src: local('NohemiM'), url("./font/Nohemi/Nohemi-Medium.woff") format("woff");
-// }
-// @font-face {
-//   font-family: "NohemiT";   /*Can be any text*/
-//   src: local('NohemiT'), url("./font/Nohemi/Nohemi-Thin.woff") format("woff");
-// }
 //VARIABLE
 
 $baseUnit : 24px;
+
 $max-mobile: 700px;
-$max_tablette: 1000px;
+$max_tablette: 1024px;
+
 $white : #dcdcdc;
 $background : #111111;
 $maincolor: #FFE500;

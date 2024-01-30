@@ -10,6 +10,7 @@ const Slider = (props) => {
 
     useEffect(() => {
         if(props.sliderItems){
+            const clickableArea = document.querySelector('.Home2')
             document.addEventListener('click', handleClick);
             props.handleChangeActiveItem(activeItem)
             return () => {

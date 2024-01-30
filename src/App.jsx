@@ -23,8 +23,11 @@ function App(){
     const [showAbout, setShowAbout] = useState(false)
     
     const toggleAbout = (e) => {
+      
       if(showAbout === false){
+        e.stopPropagation()
         setShowAbout(!showAbout)
+        
       }
       else{
         setShowAbout(!showAbout)

@@ -51,4 +51,8 @@
         width: 100%;
         height: fit-content;
     }
+
+    @media screen and (max-width: $max_tablette) {
+        display: none;
+    }
 }
