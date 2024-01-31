@@ -32,7 +32,7 @@ function Home(){
         length: length
       })
     }
-
+    
     const handleClickTitle = () => {
       let activeClip = sliderItems.find(item => item.id === activeItem);
       handleTransi(naviguate, '/work/'+activeClip.link)
@@ -51,4 +51,5 @@ function Home(){
     );
   }
   
+
   export default Home;

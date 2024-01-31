@@ -191,7 +191,7 @@
         &__container{
             width: calc(10*(100vw/12));
             height: 80vh;
-            background-color: grey;
+            background-color: rgb(24, 24, 24);
 
             @media screen and (max-width: $max_tablette) and (orientation: portrait) {
                 height:50vh;
@@ -211,6 +211,10 @@
             div{
                 width: 50%;
                 height: 100%;
+
+                img{
+                    width: 100%;
+                }
             }
         }
     }

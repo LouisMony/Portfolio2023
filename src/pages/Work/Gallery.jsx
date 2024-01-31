@@ -32,18 +32,18 @@ const Gallery = (props) => {
   return (
     <div className='work__gallery' ref={galleryRef}>
       <div className='work__gallery__container js_container'>
-          {/* <img className='gallery_image' src={`/media/work/${props.directory}/mockup_A.webp`} alt="Vignette" /> */}
+        <img className='gallery_image' src={`/media/work/${props.directory}/mockup_A.webp`} alt="Vignette" />
       </div>
       <div className='work__gallery__container  work__gallery__containerdouble '>
-        <div className='js_container'>        
-            {/* <img className='gallery_image' src={`/media/work/${props.directory}/mockup_B.webp`} alt="Vignette" /> */}
+        <div className='js_container'>  
+          <img className='gallery_image' src={`/media/work/${props.directory}/mockup_B.webp`} alt="Vignette" />
         </div>
         <div className='js_container'>        
-            {/* <img className='gallery_image' src={`/media/work/${props.directory}/mockup_C.webp`} alt="Vignette" /> */}
+          <img className='gallery_image' src={`/media/work/${props.directory}/mockup_C.webp`} alt="Vignette" />
         </div>
       </div>
       <div className='work__gallery__container js_container'>
-          {/* <img className='gallery_image' src={`/media/work/${props.directory}/mockup_D.webp`} alt="Vignette" /> */}
+          <img className='gallery_image' src={`/media/work/${props.directory}/mockup_D.webp`} alt="Vignette" />
       </div>
     </div>
   )

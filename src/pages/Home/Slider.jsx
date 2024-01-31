@@ -10,7 +10,6 @@ const Slider = (props) => {
 
     useEffect(() => {
         if(props.sliderItems){
-            const clickableArea = document.querySelector('.Home2')
             document.addEventListener('click', handleClick);
             props.handleChangeActiveItem(activeItem)
             return () => {
@@ -23,13 +22,11 @@ const Slider = (props) => {
         if(props.sliderItems){
             props.handleChangeTitle(props.sliderItems[0].name)
         }
-        
     },[props.sliderItems])
 
     const handleClick = async (event) => {
         if(animIsRunning === false){
             animIsRunning = true
-            
             const mouseY = event.clientY;
             const windowHeight = window.innerHeight;
             const isUpperHalf = mouseY < windowHeight / 2;
@@ -51,15 +48,7 @@ const Slider = (props) => {
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight - (window.innerHeight * 0.5);
             
-            gsap.to('.Home2__Slider', {
-                top: newHeight, 
-                duration: .75, 
-                ease: "power3.out", 
-                onComplete: () => {
-                    animIsRunning = false
-                    setActiveItem(activeItem + 1)
-                }
-            })
+            Animate (newHeight, false)
         }
         else{
             //VERS LE HAUT
@@ -72,17 +61,21 @@ const Slider = (props) => {
             props.handleChangeScroll(props.sliderItems[activeItem - 1].id, props.sliderItems.length)
             const currentHeight = SliderRef.current.offsetTop;
             const newHeight = currentHeight + (window.innerHeight * 0.5);
+            Animate (newHeight, true)
             
-            gsap.to('.Home2__Slider', {
-                top: newHeight, 
-                duration: .75, 
-                ease: "power3.out",
-                onComplete: () => {
-                    animIsRunning = false
-                    setActiveItem(activeItem - 1)
-                }
-            })
         }
+    }
+
+    function Animate (newHeight, toTop){
+        gsap.to('.Home2__Slider', {
+            top: newHeight, 
+            duration: 1, 
+            ease: "power3.out",
+            onComplete: () => {
+                animIsRunning = false
+                toTop ? setActiveItem(activeItem - 1) : setActiveItem(activeItem + 1)
+            }
+        })
     }
 
     return (

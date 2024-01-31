@@ -37,7 +37,7 @@ const Work = (props) => {
 
     return (
         <div className='work gsapMain' style={{
-            backgroundImage: `url('/media/work/${props.directory}/banner.jpg')`
+            backgroundImage: `url('/media/work/${props.directory}/banner.webp')`
           }}>
             <div className='work__banner'>
                 <div className='work__banner__content' >

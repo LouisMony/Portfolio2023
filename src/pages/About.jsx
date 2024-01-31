@@ -38,7 +38,8 @@ function About(props){
         gsap.fromTo('.gsapH1About',{yPercent: 30, opacity: 0}, {yPercent:0, opacity: 1,duration: 1, ease: "power3.inOut"})
     }
 
-    const handleClose = () =>{
+    const handleClose = (e) =>{
+      e.stopPropagation()
       gsap.fromTo('.gsapLink, .close',{opacity: 1, xPercent: 0},{opacity: 0, xPercent: 20, duration: .4})
       gsap.fromTo('.gsapH1About',{yPercent: 0, opacity: 1}, {yPercent:30, opacity: 0,duration: .4, ease: "power3.inOut"})
       gsap.fromTo('.lineAbout',{width: "100%"},{width: "0%", duration: .5, ease: "expo.inOut"})

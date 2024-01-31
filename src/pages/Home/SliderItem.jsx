@@ -8,13 +8,13 @@ const SliderItem = (props) => {
       initAnimImage()
     }
 
-    return () => {
-      document.removeEventListener("mousemove", handleMousePMove);
-    };
+    // return () => {
+    //   document.removeEventListener("mousemove", handleMousePMove);
+    // };
   },[props.activeItem, imgRef, props.thumbnail])
 
   const initAnimImage = () =>{
-    document.addEventListener("mousemove", handleMousePMove);
+    //document.addEventListener("mousemove", handleMousePMove);
   }
 
   function handleMousePMove(event) {
@@ -32,8 +32,9 @@ const SliderItem = (props) => {
   }
 
   return (
-    <div className={`Home2__Slider__Item ${props.activeItem === true ? 'activeItem' : ''}`}>
+    <div className={`Home2__Slider__Item ${props.activeItem === true ? 'activeItem' : ''}`} >
         <img ref={imgRef} src={props.thumbnail} alt="Vignette" />
+        {/* style={{ backgroundImage: `url(${props.thumbnail})` }} */}
     </div>
   )
 }
