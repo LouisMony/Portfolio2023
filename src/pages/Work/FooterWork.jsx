@@ -11,7 +11,10 @@ const FooterWork = (props) => {
                 <p>Next Project</p>
                 <p className='work__footer__hover__name'>{props.textLink}</p>
             </div>
-            <img className='nextImg' src="/media/work/primeprono/mockup_B.webp" alt="" />
+            <div className='work__footer__img'>
+                <img className='nextImg' src="/media/work/primeprono/mockup_B.webp" alt="" />
+            </div>
+            
         </div>
     );
 };
