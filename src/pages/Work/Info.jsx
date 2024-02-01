@@ -13,13 +13,13 @@ const Info = (props) => {
     
             gsap.registerPlugin(ScrollTrigger);
     
-            gsap.fromTo('.work__banner__content__info', {
+            gsap.fromTo(infoBloc.current, {
                 y: 0,
                 opacity: 1
             },
             {
                 scrollTrigger: {
-                    trigger: '.work__banner__content__info',
+                    trigger: infoBloc.current,
                     start: 'top 50%',
                     end: 'top 0%',
                     scrub: true,

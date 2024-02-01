@@ -38,15 +38,7 @@ export const worklist = [
       link: "eventapp", 
       type: "School",
       background : '/media/work/eventapp/banner.webp'
-    },
-    {
-      id: 5,
-      date: "10.2021",
-      name: "Eqlips Music",
-      link: "eqlips", 
-      type: "Personal",
-      background : '/media/work/eqlips/banner.webp'
-    },
+    }
 ]
 
 export const projectsData = [
@@ -121,26 +113,8 @@ export const projectsData = [
       directory: 'eventapp',
       paraA: 'Welcome to the "Event" application designed to simplify the planning of events in board and card game stores. You can say goodbye to paper lists and disorganization. Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel, etc...',
       paraB: "The front-end of the project is in Vue JS, and the backend as well as the back office work on the Airtable platform to facilitate the administration of the tool for the client. Designed by my-self on Figma.",
-      link: 'eqlips',
-      linkname: 'EQLIPS'
-    },
-  },
-  {
-    path: 'work/eqlips',
-    data: {
-      date: "10.2021",
-      type: "Personal",
-      stack: "Webdesign - FRONT-END development",
-      projectName: "Eqlips Music",
-      demolink: "https://eqlips-steaming.netlify.app/",
-      directory: 'eqlips',
-      paraA: "Eqlips Streaming is a streaming platform dedicated to the Eqlips producers' collective. Each member can publish their tracks on the platform and listen to other producers' tracks for free. The project's goal was to create a space for producers to share their music and expand the collective to a wider audience.",
-      paraB: "The entire project is coded in HTML/CSS/JS Vanilla and uses Airtable to store data and tracks. Designed by my-self on Figma.",
       link: 'kia',
       linkname: 'KIA OSB'
     },
   },
-  
-  
-  
 ];

@@ -12,6 +12,10 @@
         top: 25vh;
         left: 50%;
         width: calc((100% / 12) * 6);
+
+        @media screen and (max-width: $max_tablette) {
+            width: calc((100% / 12) * 10);
+        }
     
         &__Item {
             padding: calc($baseUnit/2) 0;
@@ -81,6 +85,9 @@
         left: 50%;
         height: 13vw;
         overflow: hidden;
+        @media screen and (max-width: $max_tablette) {
+            height: 28vw;
+        }
 
         h2{
             font-size: 15vw;
@@ -91,12 +98,22 @@
             line-height: 13vw;
             cursor: pointer;
             transition: letter-spacing 500ms cubic-bezier(.01, .82, .23, 1), margin-right 500ms cubic-bezier(.01, .82, .23, 1);
+        
+            @media screen and (max-width: $max_tablette) {
+                font-size: 30vw;
+                line-height: 28vw;
+            }
         }
 
         .current{
             &:hover{
                 letter-spacing: 30px;
                 margin-right: -30px;
+
+                @media screen and (max-width: $max_tablette) {
+                    letter-spacing: inherit;
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -112,6 +129,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: $max_tablette) {
+            display: none;
+        }
         
         &__Graduation{
             width: 20%;

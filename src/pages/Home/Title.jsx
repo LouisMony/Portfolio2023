@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import React, { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { isTablette } from '../../js/helper';
 
 const Title = (props) => {
     const titleBlocRef = useRef(null)
@@ -14,7 +15,7 @@ const Title = (props) => {
     useGSAP(() => {
         if(titleBlocRef){
             gsap.to('.Home2__Title__h2', {
-                translateY: "-13vw", 
+                translateY: !isTablette() ? "-13vw" : "-28vw", 
                 duration: 1, 
                 ease: "power3.out", 
                 onComplete: () => {
