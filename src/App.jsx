@@ -7,7 +7,7 @@ import About from './pages/About';
 
 import Component__Header from './components/Component__Header';
 import Component__Cursor from './components/Component__Cursor';
-
+import Component__Loader from './components/Component__Loader';
 import ComponentTransi from './components/ComponentTransi';
 
 //STYLE 
@@ -48,6 +48,7 @@ function App(){
           <Component__Header toggleAboutFunction={toggleAbout}/>
           <ComponentTransi />
           <Component__Cursor />
+          <Component__Loader />
           {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
           <Outlet />

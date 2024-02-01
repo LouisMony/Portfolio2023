@@ -9,42 +9,15 @@
     height: 100vh;
     background-color: $background;
     z-index: 30000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 
-    &__line{
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.16);
-        height: 1px;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        @media screen and (max-width: $max_mobile) {
-            display: none;
-        }
-    }
-
-    #loaderLine1{
-        top: 30%;
-        left: 50%;
-    }
-    #loaderLine2{
-        top: 70%;
-        left: 50%;
-    }
-    #loaderLine3{
-        top: 50%;
-        left: 30%;
-        width: 100vh;
-        transform: translate(-50%, -50%) rotateZ(90deg);
-    }
-    #loaderLine4{
-        top: 50%;
-        left: 70%;
-        width: 100vh;
-        transform: translate(-50%, -50%) rotateZ(90deg);
-    }
 
     p{
         color: $white;
-        font-size: 12px;
+        font-size: 5vw;
         padding: $baseUnit;
         font-family: Helvetica, sans-serif;
     }
