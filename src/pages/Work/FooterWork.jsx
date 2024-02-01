@@ -12,7 +12,7 @@ const FooterWork = (props) => {
                 <p className='work__footer__hover__name'>{props.textLink}</p>
             </div>
             <div className='work__footer__img'>
-                <img className='nextImg' src="/media/work/primeprono/mockup_B.webp" alt="" />
+                <img className='nextImg' src={"/media/work/"+props.nextLink+"/banner.webp"} alt="" />
             </div>
             
         </div>

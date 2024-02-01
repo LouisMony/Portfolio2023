@@ -14,6 +14,9 @@
         @media screen and (max-width: $max_tablette) {
             height: 20vh;
         }
+        @media screen and (max-width: $max_mobile) {
+            height: 10vh;
+        }
     }
     
     &__banner{
@@ -45,7 +48,6 @@
                 @media screen and (max-width: $max_mobile) {
                     flex-direction: column;
                     align-items: end;
-                    top: 40vh;
                     right: 2vw;
                     left: auto;
                 }
@@ -60,7 +62,7 @@
 
                     @media screen and (max-width: $max_tablette) {
                         width: fit-content;
-                        font-size: 32px;
+                        
                     }
 
                     @media screen and (max-width: $max_mobile) {
@@ -98,6 +100,7 @@
 
                 @media screen and (max-width: $max_tablette) {
                     margin-bottom: -4.5vw;
+                    
                     .charTitleWork{
                         font-size: 31vw;
                     }
@@ -129,21 +132,30 @@
         min-height: 60vh;
         position: relative;
 
+        @media screen and (max-width: $max_tablette) {
+            flex-direction: column;
+            gap: calc(2*$baseUnit);
+            min-height: fit-content;
+        }
+
         &__line{
+            position: absolute;
             top: 40px;
             left: calc((100vw/12));
             width: calc(10*(100vw/12));
-            position: absolute;
             height: 1px;
             opacity: .5;
             background-color: $white;
+
+            @media screen and (max-width: $max_mobile) {
+                top: 0px;
+            }
         }
 
         &__text{
             width: calc(7*(100vw/12));
-            @media screen and (max-width: $max_mobile) {
+            @media screen and (max-width: $max_tablette) {
                 width: 100%;
-                margin-top: calc(2*$baseUnit);
             }
             p{
                 width: 100%;
@@ -152,7 +164,7 @@
                     color: $white;
                     font-size: 32px;
 
-                    @media screen and (max-width: $max_mobile) {
+                    @media screen and (max-width: $max_tablette) {
                         font-size: 20px;
                     }
                 }
@@ -190,16 +202,11 @@
 
         &__container{
             width: calc(10*(100vw/12));
-            height: 80vh;
+            height: fit-content;
             background-color: rgb(24, 24, 24);
-
-            @media screen and (max-width: $max_tablette) and (orientation: portrait) {
-                height:50vh;
-            }
 
             img{
                 width: 100%;
-                height: 100%;
                 object-fit: cover;
             }
         }
@@ -207,18 +214,27 @@
         &__containerdouble{
             display: flex;
             gap: $baseUnit;
+            height: fit-content;
 
+            
             div{
                 width: 50%;
-                height: 100%;
-
+                height: fit-content;
+                
                 img{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: $max_tablette) and (orientation: portrait) {
+                flex-direction: column;
+                
+                div{
                     width: 100%;
                 }
             }
         }
     }
-
+    
     &__footer{
         background-color: $background;
         color: $white;
@@ -247,9 +263,8 @@
             }
 
             img{
-                width: 160%;
-                height: 160%;
-                object-fit: cover;
+                width: 200%;
+                height: 200%;
                 transition: all 600ms cubic-bezier(.15,.77,.29,.92);
             }
         }
