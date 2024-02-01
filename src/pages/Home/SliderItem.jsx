@@ -8,13 +8,13 @@ const SliderItem = (props) => {
       initAnimImage()
     }
 
-    // return () => {
-    //   document.removeEventListener("mousemove", handleMousePMove);
-    // };
+    return () => {
+      document.removeEventListener("mousemove", handleMousePMove);
+    };
   },[props.activeItem, imgRef, props.thumbnail])
 
   const initAnimImage = () =>{
-    //document.addEventListener("mousemove", handleMousePMove);
+    document.addEventListener("mousemove", handleMousePMove);
   }
 
   function handleMousePMove(event) {
