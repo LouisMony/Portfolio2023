@@ -258,15 +258,21 @@
             transition: all 600ms cubic-bezier(.15,.77,.29,.92);
             filter: brightness(.7);
 
-            @media screen and (max-width: $max_tablette) {
-                display: none;
-            }
-
             img{
                 width: 200%;
                 height: 200%;
                 transition: all 600ms cubic-bezier(.15,.77,.29,.92);
             }
+            
+            @media screen and (max-width: $max_tablette) {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
         }
 
         &__hover:hover ~ &__img {

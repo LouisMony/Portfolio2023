@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { isTablette } from '../../js/helper';
 
 const SliderItem = (props) => {
   const imgRef = useRef(null)
   useEffect(() =>{
-    if(props.activeItem && imgRef && props.thumbnail){
+    if(props.activeItem && imgRef && props.thumbnail && !isTablette()){
       initAnimImage()
     }
 
@@ -34,7 +35,6 @@ const SliderItem = (props) => {
   return (
     <div className={`Home2__Slider__Item ${props.activeItem === true ? 'activeItem' : ''}`} >
         <img ref={imgRef} src={props.thumbnail} alt="Vignette" />
-        {/* style={{ backgroundImage: `url(${props.thumbnail})` }} */}
     </div>
   )
 }
