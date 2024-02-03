@@ -10,6 +10,10 @@ import ScrollScooter from "./ScrollScooter";
 import { worklist } from "../../js/worklist";
 import transition from "../../js/transition";
 import Component__Cursor from "../../components/Component__Cursor";
+import SwiperElement from "./Swiper";
+
+//SLIDER 
+
 
 
 const Home = () => {
@@ -17,38 +21,39 @@ const Home = () => {
     const sliderItems = worklist
     const naviguate = useNavigate()
 
+    const [activeItem, setActiveItem] = useState(0)
     const [title, setTitle] = useState(null)
     const [scrollInfo, setScrollInfo] = useState({
       id: null,
-      length: 6
+      length: 10
     })
-    const [activeItem, setActiveItem] = useState(0)
-
-    const handleChangeTitle = (title) =>{
-      setTitle(title)
-    }
-    
-    const handleChangeScroll = (id, length) =>{
-      setScrollInfo({
-        id: id,
-        length: length
-      })
-    }
     
     const handleClickTitle = () => {
       let activeClip = sliderItems.find(item => item.id === activeItem);
       naviguate('/work/'+activeClip.link)
-      //handleTransi(naviguate, )
     }
 
-    const handleChangeActiveItem = (id) => {
-      setActiveItem(id)
+    const handleChangeSlide = (swiper) => {
+      const activeIndex = swiper.activeIndex
+      const totalSlides = swiper.slides.length;
+      let newActiveItem = sliderItems.find(item => item.id === activeIndex);
+      setTitle(newActiveItem.name)
+      setScrollInfo({
+        id: activeIndex,
+        length: totalSlides
+      })
+      setActiveItem(activeIndex)
     }
+
+    useEffect(() =>{
+      setTitle(worklist[0].name)
+    },[])
 
     return (
       <div ref={homeRef} className='Home2 gsapMain'>
         <Component__Cursor />
-        <Slider sliderItems={sliderItems} handleChangeActiveItem={handleChangeActiveItem} handleChangeTitle={handleChangeTitle} handleChangeScroll={handleChangeScroll}/>
+        
+        <SwiperElement sliderItems={sliderItems} handleChangeSlide={handleChangeSlide}/>
         <Title title={title} handleClickTitle={handleClickTitle}/>
         <ScrollScooter scrollInfo={scrollInfo}/>
       </div>

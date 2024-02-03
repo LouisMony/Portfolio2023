@@ -4,20 +4,20 @@ import { useEffect, useState } from 'react';
 
 //COMP
 import About from './pages/About';
-
 import Component__Header from './components/Component__Header';
 import Component__Cursor from './components/Component__Cursor';
 import Component__Loader from './components/Component__Loader';
-
+import Home from './pages/Home';
+import Work from './pages/Work/Work';
 //STYLE 
 import './index.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { AnimatePresence } from 'framer-motion';
-import Home from './pages/Home';
 import { projectsData } from './js/worklist';
-import Work from './pages/Work/Work';
+import { AnimatePresence } from 'framer-motion';
+
+
 
 //jS 
 
@@ -49,7 +49,7 @@ function App(){
     return (
       <div>
           <Component__Header toggleAboutFunction={toggleAbout}/>
-          <Component__Loader />
+          {/* <Component__Loader /> */}
 
           {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
