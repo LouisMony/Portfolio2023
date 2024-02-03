@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { handleTransi } from "../../js/handleTransi";
 
 //COMPOSANT
-import Slider from "./Slider";
 import Title from "./Title";
 import ScrollScooter from "./ScrollScooter";
 import { worklist } from "../../js/worklist";
