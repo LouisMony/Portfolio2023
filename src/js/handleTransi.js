@@ -27,5 +27,5 @@ export const handleTransi = (naviguate, dest) => {
             console.error('An error occurred in handleTransi:', error);
         }
     }
-    
 };
+

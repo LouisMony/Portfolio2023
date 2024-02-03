@@ -6,9 +6,8 @@ import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
 import Gallery from './Gallery';
 import Info from './Info';
+import transition from '../../js/transition';
 import FooterWork from './FooterWork';
-
-
 //JS
 import { initLenis, fixHeight } from './helper/helper';
 
@@ -30,11 +29,6 @@ const Work = (props) => {
             setIsMobile(false)
         }
     }
-
-    useEffect(()=>{
-
-    },[props])
-
     return (
         <div className='work gsapMain' style={{
             backgroundImage: `url('/media/work/${props.directory}/banner.webp')`
@@ -50,10 +44,9 @@ const Work = (props) => {
             <Gallery directory={props.directory} />
             <div className='work__spacer'></div>
             <DescriptionWork textContent={props.paraA} label={'Context'} />
-            {/* <VisitButton textContent={'Visit Website'} /> */}
             <FooterWork directory={props.directory} nextLink={props.link} textLink={props.linkname}/>
         </div>
     )
 }
 
-export default Work
+export default transition(Work)

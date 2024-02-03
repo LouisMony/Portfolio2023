@@ -34,7 +34,7 @@ const SliderItem = (props) => {
 
   return (
     <div className={`Home2__Slider__Item ${props.activeItem === true ? 'activeItem' : ''}`} >
-        <img ref={imgRef} src={props.thumbnail} alt="Vignette" />
+        {/* <img ref={imgRef} src={props.thumbnail} alt="Vignette" /> */}
     </div>
   )
 }

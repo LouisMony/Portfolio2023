@@ -8,9 +8,10 @@ import Slider from "./Slider";
 import Title from "./Title";
 import ScrollScooter from "./ScrollScooter";
 import { worklist } from "../../js/worklist";
+import transition from "../../js/transition";
 
 
-function Home(){
+const Home = () => {
     const homeRef = useRef(null)
     const sliderItems = worklist
     const naviguate = useNavigate()
@@ -35,7 +36,8 @@ function Home(){
     
     const handleClickTitle = () => {
       let activeClip = sliderItems.find(item => item.id === activeItem);
-      handleTransi(naviguate, '/work/'+activeClip.link)
+      naviguate('/work/'+activeClip.link)
+      //handleTransi(naviguate, )
     }
 
     const handleChangeActiveItem = (id) => {
@@ -52,4 +54,4 @@ function Home(){
   }
   
 
-  export default Home;
+  export default transition(Home);

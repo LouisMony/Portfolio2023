@@ -15,13 +15,17 @@ import './index.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { Outlet } from 'react-router';
+import { AnimatePresence } from 'framer-motion';
+import Home from './pages/Home';
+import { projectsData } from './js/worklist';
+import Work from './pages/Work/Work';
 
 //jS 
 
 function App(){
     const [showAbout, setShowAbout] = useState(false)
-    
+    const location = useLocation()
+
     const toggleAbout = (e) => {
       
       if(showAbout === false){
@@ -49,9 +53,21 @@ function App(){
           <ComponentTransi />
           <Component__Cursor />
           <Component__Loader />
+
           {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
-          <Outlet />
+          <AnimatePresence mode='wait'>
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home/>} />
+              {projectsData.map((project) => (
+                  <Route
+                      key={project.path}
+                      path={project.path}
+                      element={<Work {...project.data} />}
+                  />
+              ))}
+            </Routes>
+          </AnimatePresence>
       </div>
     );
 }

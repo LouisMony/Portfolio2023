@@ -11,7 +11,11 @@ import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <Router>
+      <Routes>
+          <Route path={'/*'} element={<App/>} />
+      </Routes>
+  </Router>
 );
 
 reportWebVitals();

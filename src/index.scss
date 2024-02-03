@@ -154,39 +154,6 @@ body{
       }
     }
   }
-
-  &:before {
-    display: none;
-    z-index: 50000;
-    position: fixed;
-    content: '';
-    height: 300%;
-    width: 300%;
-    top: -100%;
-    left: -50%;
-    pointer-events: none;
-    user-select: none;
-    background-image: url('./media/texture.png');
-    opacity: 0.029;
-    animation: noise 8s steps(10) infinite;
-
-    @media screen and (max-width: $max_mobile) {
-      display: none;
-    }
-  }
-
-  @keyframes noise {
-    0%, 100% { transform:translate(0, 0); }
-    10% { transform:translate(-5%, -10%); }
-    20% { transform:translate(-15%, 5%); }
-    30% { transform:translate(7%, -25%); }
-    40% { transform:translate(-5%, 25%); }
-    50% { transform:translate(-15%, 10%); }
-    60% { transform:translate(15%, 0%); }
-    70% { transform:translate(0%, 15%); }
-    80% { transform:translate(3%, 35%); }
-    90% { transform:translate(-10%, 10%); }
-  }
 }
 
 p,h1,h2,h3,h3{
@@ -197,4 +164,37 @@ p,h1,h2,h3,h3{
 a{
   text-decoration: none;
   color: inherit;
+}
+
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  transform-origin: bottom;
+  z-index: 11000;
+}
+
+.slide-out{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  transform-origin: bottom;
+  z-index: 11000;
+}
+
+.slide-out-scnd{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $background;
+  transform-origin: bottom;
+  z-index: 11000;
 }
