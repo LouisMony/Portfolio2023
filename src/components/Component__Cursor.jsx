@@ -15,9 +15,7 @@ const Component__Cursor = () => {
   }, [location]);
 
     const initHoverAbleItems = () =>{
-      console.log('je relance');
         const hoverableItem = document.querySelectorAll('.js_hoverable')
-        console.log(hoverableItem ? hoverableItem : null);
 
         hoverableItem.forEach(item =>{
           item.addEventListener("mouseover", (event) => {

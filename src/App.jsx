@@ -8,7 +8,6 @@ import About from './pages/About';
 import Component__Header from './components/Component__Header';
 import Component__Cursor from './components/Component__Cursor';
 import Component__Loader from './components/Component__Loader';
-import ComponentTransi from './components/ComponentTransi';
 
 //STYLE 
 import './index.scss';
@@ -46,8 +45,6 @@ function App(){
         gsap.fromTo('.gsapMain, .header, .footer', {opacity: 1}, {opacity: 0, duration: 1, ease: "expo.out"})
       }
     },[showAbout])
-
-    console.log(projectsData);
       
     return (
       <div>
