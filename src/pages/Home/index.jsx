@@ -9,6 +9,7 @@ import Title from "./Title";
 import ScrollScooter from "./ScrollScooter";
 import { worklist } from "../../js/worklist";
 import transition from "../../js/transition";
+import Component__Cursor from "../../components/Component__Cursor";
 
 
 const Home = () => {
@@ -46,6 +47,7 @@ const Home = () => {
 
     return (
       <div ref={homeRef} className='Home2 gsapMain'>
+        <Component__Cursor />
         <Slider sliderItems={sliderItems} handleChangeActiveItem={handleChangeActiveItem} handleChangeTitle={handleChangeTitle} handleChangeScroll={handleChangeScroll}/>
         <Title title={title} handleClickTitle={handleClickTitle}/>
         <ScrollScooter scrollInfo={scrollInfo}/>

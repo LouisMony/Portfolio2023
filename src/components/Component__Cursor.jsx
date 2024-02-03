@@ -4,20 +4,21 @@ import gsap from 'gsap'
 import { useLocation } from 'react-router-dom';
 
 const Component__Cursor = () => {
-    const location = useLocation()
     const cursorRef = useRef(null)
     const [activeCursor, setActiveCursor] = useState(false)
-    
-    useEffect(()=>{
-        InitCursor()
-    },[])
+    const location = useLocation();
 
-    useEffect(()=>{
-      initHoverAbleItems()
-    },[location])
+    useEffect(() => {
+      initHoverAbleItems();
+      InitCursor();
+      
+  }, [location]);
 
     const initHoverAbleItems = () =>{
-      const hoverableItem = document.querySelectorAll('.js_hoverable')
+      console.log('je relance');
+        const hoverableItem = document.querySelectorAll('.js_hoverable')
+        console.log(hoverableItem ? hoverableItem : null);
+
         hoverableItem.forEach(item =>{
           item.addEventListener("mouseover", (event) => {
             setActiveCursor(true)
@@ -38,8 +39,6 @@ const Component__Cursor = () => {
     const InitCursor = () => {
         gsap.set(cursorRef.current, {xPercent: -50, yPercent: -50});
 
-        
-  
         let xTo = gsap.quickTo(cursorRef.current, "x", {duration: 0.6, ease: "power3"}),
             yTo = gsap.quickTo(cursorRef.current, "y", {duration: 0.6, ease: "power3"});
   
@@ -50,10 +49,8 @@ const Component__Cursor = () => {
       }
 
     return (
-        <div>
-            <div ref={cursorRef} className={`cursor ${activeCursor ? 'ishovering' : ''}`}>
-              <p className={`cursor_p`}>VIEW</p>
-            </div>
+        <div ref={cursorRef} className={`cursor ${activeCursor ? 'ishovering' : ''}`}>
+          <p className={`cursor_p`}>VIEW</p>
         </div>
     )
 }

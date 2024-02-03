@@ -46,12 +46,12 @@ function App(){
         gsap.fromTo('.gsapMain, .header, .footer', {opacity: 1}, {opacity: 0, duration: 1, ease: "expo.out"})
       }
     },[showAbout])
+
+    console.log(projectsData);
       
     return (
       <div>
           <Component__Header toggleAboutFunction={toggleAbout}/>
-          <ComponentTransi />
-          <Component__Cursor />
           <Component__Loader />
 
           {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
@@ -63,7 +63,7 @@ function App(){
                   <Route
                       key={project.path}
                       path={project.path}
-                      element={<Work {...project.data} />}
+                      element={<Work data={project.data} />} // Ensure data prop is passed here
                   />
               ))}
             </Routes>

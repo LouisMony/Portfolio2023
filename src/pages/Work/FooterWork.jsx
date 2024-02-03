@@ -7,7 +7,7 @@ const FooterWork = (props) => {
 
     return (
         <div className='work__footer'>
-            <div className='work__footer__hover js_hoverable' onClick={() => handleTransi(naviguate, '/work/'+props.nextLink)} >
+            <div className='work__footer__hover js_hoverable' onClick={() => naviguate('/work/'+props.nextLink)} >
                 <p>Next Project</p>
                 <p className='work__footer__hover__name'>{props.textLink}</p>
             </div>

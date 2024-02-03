@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const transition = (OgComponent) => {
-    return () => (
+    return (props) => (
         <>
-            <OgComponent />
+            <OgComponent {...props} />
             <motion.div  //BLANC
                 className="slide-in"
                 initial={{ clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' }}

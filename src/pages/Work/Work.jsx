@@ -1,52 +1,58 @@
-import React, { useEffect, useRef, useState } from 'react'
-import '../../style/Work.scss'
+import React, { useEffect, useRef, useState } from 'react';
+import '../../style/Work.scss';
 
-//COMPOSANT
+// COMPOSANT
 import TitleWork from './TitleWork';
 import DescriptionWork from './DescriptionWork';
 import Gallery from './Gallery';
 import Info from './Info';
 import transition from '../../js/transition';
 import FooterWork from './FooterWork';
-//JS
+import Component__Cursor from '../../components/Component__Cursor';
+// JS
 import { initLenis, fixHeight } from './helper/helper';
 
 const Work = (props) => {
-    const [isMobile, setIsMobile] = useState(null)
+    const { data } = props;
+    const { date, type, stack, projectName, demolink, directory, paraA, paraB, link, linkname } = data;
 
-    useEffect(() =>{
+    const [isMobile, setIsMobile] = useState(null);
+
+    useEffect(() => {
         window.scrollTo(0, 0);
-        initLenis()
-        checkScreenSize()
-        fixHeight()
-    },[])
-   
-    const checkScreenSize = () =>{
+        initLenis();
+        checkScreenSize();
+        fixHeight();
+    }, []);
+
+    const checkScreenSize = () => {
         if (window.matchMedia('(min-width: 768px)').matches) {
-            setIsMobile(true)
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
         }
-        else{
-            setIsMobile(false)
-        }
-    }
+    };
+
     return (
         <div className='work gsapMain' style={{
-            backgroundImage: `url('/media/work/${props.directory}/banner.webp')`
-          }}>
+            backgroundImage: `url('/media/work/${directory}/banner.webp')`
+        }}>
+            <Component__Cursor />
             <div className='work__banner'>
                 <div className='work__banner__content' >
-                    <Info date={props.date} demolink={props.demolink} stack={props.stack} />
-                    <TitleWork title={props.projectName}></TitleWork>
+                    <Info date={date} demolink={demolink} stack={stack} />
+                    <TitleWork title={projectName}></TitleWork>
                 </div>
             </div>
             <div className='work__spacer'></div>
-            <DescriptionWork textContent={props.paraA} label={props.stack} />
-            <Gallery directory={props.directory} />
+            <DescriptionWork textContent={paraA} label={'Context'} />
+            <Gallery directory={directory} />
             <div className='work__spacer'></div>
-            <DescriptionWork textContent={props.paraA} label={'Context'} />
-            <FooterWork directory={props.directory} nextLink={props.link} textLink={props.linkname}/>
+            <DescriptionWork textContent={paraA} label={'Context'} />
+            <FooterWork directory={directory} nextLink={link} textLink={linkname}/>
         </div>
-    )
-}
+    );
+};
 
-export default transition(Work)
+// Enveloppez votre composant avec la fonction de transition ici
+export default transition(Work);
