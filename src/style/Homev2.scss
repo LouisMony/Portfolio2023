@@ -6,77 +6,6 @@
     position: relative;
     overflow: hidden;
 
-    &__Slider {
-        position: absolute;
-        transform: translate(-50%, 0%);
-        top: 25vh;
-        left: 50%;
-        width: calc((100% / 12) * 6);
-
-        @media screen and (max-width: $max_tablette) {
-            width: calc((100% / 12) * 10);
-        }
-    
-        &__Item {
-            padding: calc($baseUnit/2) 0;
-            background-color: grey;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-            width: 100%;
-            overflow: hidden;
-
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-
-            img{
-                width: 130%;
-                height: 130%;
-                object-fit: cover;
-                z-index: 10;
-                opacity: 1;
-                filter: brightness(.25); 
-                transition: all 300ms linear;   
-            
-                
-            }
-
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 10px;
-                width: 1500px;
-                z-index: 100;
-                background-color: $background;
-            }
-
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 10px;
-                width: 1500px;
-                z-index: 100;
-                background-color: $background;
-            }
-
-        }
-
-        .activeItem{
-            img{
-                filter: brightness(.75);    
-            }
-                    
-        }
-    }
-
     &__Title{
         width: max-content;
         position: fixed;
@@ -164,12 +93,16 @@
     height: 100vh;
     padding-top: 25vh;
 
+    .swiper-wrapper{
+        transition-timing-function: cubic-bezier(.1,.67,.27,.92)
+    }
+
     .swiper {
         width: calc((100% / 12) * 6);
         height: 50vh;
         z-index: 100;
         overflow: visible!important;
-        transition-timing-function: cubic-bezier(.09,.78,.27,.95);
+        
     
         .swiper-slide {
             height: 50vh;

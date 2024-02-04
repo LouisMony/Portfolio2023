@@ -16,7 +16,7 @@ const Title = (props) => {
         if(titleBlocRef){
             gsap.to('.Home2__Title__h2', {
                 translateY: !isTablette() ? "-13vw" : "-28vw", 
-                duration: 1, 
+                duration: .8, 
                 ease: "power3.out", 
                 onComplete: () => {
                     setCurrentTitle(props.title)

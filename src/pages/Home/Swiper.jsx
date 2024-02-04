@@ -52,7 +52,7 @@ const SwiperElement = (props) => {
                 slidesPerView={1}
                 spaceBetween={48}
                 className="Home2__swiper"
-                speed={1000}
+                speed={800}
                 onSlideChange={(swiper) => props.handleChangeSlide(swiper)}
                 onSwiper={(swiper) => { swiperRef.current = swiper; }}
             >
