@@ -18,6 +18,7 @@ const Home = () => {
     const sliderItems = worklist
     const naviguate = useNavigate()
 
+    const [slideToGo, setSlideToGo] = useState(0)
     const [activeItem, setActiveItem] = useState(0)
     const [title, setTitle] = useState(null)
     const [scrollInfo, setScrollInfo] = useState({
@@ -30,6 +31,9 @@ const Home = () => {
       naviguate('/work/'+activeClip.link)
     }
 
+    const handleClickScooter = (number) => {
+      if(number !== activeItem) setSlideToGo(number)
+    }
 
     const handleChangeSlide = (swiper) => {
       const activeIndex = swiper.activeIndex
@@ -51,9 +55,9 @@ const Home = () => {
       <div ref={homeRef} className='Home2 gsapMain'>
         <Component__Cursor />
         
-        <SwiperElement sliderItems={sliderItems} handleChangeSlide={handleChangeSlide}/>
+        <SwiperElement sliderItems={sliderItems} handleChangeSlide={handleChangeSlide} slideToGo={slideToGo}/>
         <Title title={title} handleClickTitle={handleClickTitle}/>
-        <ScrollScooter scrollInfo={scrollInfo}/>
+        <ScrollScooter scrollInfo={scrollInfo} handleClickScooter={handleClickScooter}/>
       </div>
     );
   }

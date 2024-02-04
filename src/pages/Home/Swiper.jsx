@@ -25,6 +25,15 @@ const SwiperElement = (props) => {
         } 
     };
 
+    useEffect(() =>{
+        if(swiperRef.current){
+            if (isTransitioning) {
+                return;
+            }
+            swiperRef.current.slideTo(props.slideToGo)
+        } 
+    },[props.slideToGo])
+
     useEffect(() => {
         if(swiperRef.current) {
             const handleTransitionStart = () => {

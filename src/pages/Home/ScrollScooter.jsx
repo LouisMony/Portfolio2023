@@ -22,13 +22,8 @@ const ScrollScooter = (props) => {
       const scrollScooter = event.currentTarget;
       const clickPositionY = event.clientY - scrollScooter.getBoundingClientRect().top;
       const clickPercentage = (clickPositionY / scrollScooter.clientHeight);
-  
-      // Maintenant, vous pouvez utiliser clickPercentage comme vous en avez besoin.
       const newSlide = Math.trunc(props.scrollInfo.length*clickPercentage)
-      console.log('NEW slide  = '+ newSlide);
-      
-  
-      // Mettez à jour votre état ou effectuez d'autres actions en fonction du clic.
+      props.handleClickScooter(newSlide)
     };
 
     return (
