@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import Magnetic from '../../components/Magnetic';
 
 const SwiperElement = (props) => {
     const [isTransitioning, setIsTransitioning] = useState(false);

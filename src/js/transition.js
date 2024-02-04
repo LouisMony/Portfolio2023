@@ -11,7 +11,7 @@ const transition = (OgComponent) => {
                 initial={{ clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' }}
                 animate={{ clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' }} 
                 exit={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
-                transition={{ duration:  1.2, ease: [0.72, 0, 0.23, 1] }}
+                transition={{ duration:  1, ease: [0.72, 0, 0.23, 1] }}
             >
                 <p className='Transi__P'>Louis mony - FOLIO 2024</p>
             </motion.div>

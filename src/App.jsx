@@ -49,7 +49,7 @@ function App(){
     return (
       <div>
           <Component__Header toggleAboutFunction={toggleAbout}/>
-          {/* <Component__Loader /> */}
+          <Component__Loader />
 
           {showAbout ? <About toggleAboutFunction={toggleAbout}/> : null }
 
