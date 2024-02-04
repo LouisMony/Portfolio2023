@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
-import '../style/Style__HeaderFooter.scss'
+import '../style/Style__Header.scss'
 import { handleTransi } from '../js/handleTransi'
 
 const Component__Header = ({ toggleAboutFunction }) => {
@@ -16,9 +16,12 @@ const Component__Header = ({ toggleAboutFunction }) => {
   return (
     <div className='header'>
       <Link to={'/'}>Louis Mony - Folio 2024</Link>
-      <span onClick={toggleAboutFunction} className='homelink'>
-        About
-      </span>
+      <div className='header__about' onClick={toggleAboutFunction}>
+        <div className='header__about__hoverable'>
+          <p>ABOUT</p>
+          <p>ABOUT</p>
+        </div>
+      </div>
     </div>
   )
 }

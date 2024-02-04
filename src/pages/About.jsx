@@ -34,13 +34,13 @@ function About(props){
     const initAnim = () => {
         gsap.fromTo('.lineAbout',{width: "0"},{width: "100%", duration: 2, ease: "expo.inOut"})
         gsap.fromTo('.gsapAboutItem',{yPercent: 100},{yPercent: 0, stagger: .035, duration: 2, delay: .6, ease: "expo.out"})
-        gsap.fromTo('.gsapLink, .close',{opacity: 0, xPercent: 20},{opacity: 1, xPercent: 0, stagger: .2, duration: 1, delay: 1})
+        gsap.fromTo('.gsapLink, .close',{opacity: 0, yPercent: 50},{opacity: 1, yPercent: 0, stagger: .2, duration: .5, delay: 1})
         gsap.fromTo('.gsapH1About',{yPercent: 30, opacity: 0}, {yPercent:0, opacity: 1,duration: 1, ease: "power3.inOut"})
     }
 
     const handleClose = (e) =>{
       e.stopPropagation()
-      gsap.fromTo('.gsapLink, .close',{opacity: 1, xPercent: 0},{opacity: 0, xPercent: 20, duration: .4})
+      gsap.fromTo('.gsapLink, .close',{opacity: 1, yPercent: 0},{opacity: 0, yPercent: 50, duration: .4})
       gsap.fromTo('.gsapH1About',{yPercent: 0, opacity: 1}, {yPercent:30, opacity: 0,duration: .4, ease: "power3.inOut"})
       gsap.fromTo('.lineAbout',{width: "100%"},{width: "0%", duration: .5, ease: "expo.inOut"})
       gsap.fromTo('.gsapAboutItem',{yPercent: 0},{yPercent: 100, duration: .5, ease: "expo.out", onComplete: () =>{
@@ -55,7 +55,12 @@ function About(props){
     return (
       <div className='About'>
         <div className="About__content">
-          <span className="close" onClick={handleClose}>CLOSE</span>
+          <span className="close" onClick={handleClose}>
+            <div className='close__hoverable'>
+              <p>Close</p>
+              <p>Close</p>
+            </div>
+          </span>
           <h2 className="gsapH1About">Louis Mony</h2>
           <div className="Gsap_container"><p className="gsapAboutItem">French front-end developper & webdesigner based in Paris</p></div>
 

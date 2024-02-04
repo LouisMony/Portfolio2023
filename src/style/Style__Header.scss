@@ -1,0 +1,54 @@
+@import '../index.scss';
+
+.header, .footer{
+    z-index: 10000;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    
+    a{
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: $baseUnit;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &__about{
+        cursor: pointer;
+        padding: $baseUnit;
+
+        &__hoverable{
+            height: 14px;
+            overflow: hidden;
+            p{
+                font-family: Helvetica, sans-serif;
+                text-transform: uppercase;
+                font-size: 12px;
+                transform: translateY(0%);
+                transition: all 500ms cubic-bezier(.15,.77,.29,.92);
+                color: $white;
+                
+            }
+        }
+
+        @media screen and (min-width: $max_tablette) {
+            &:hover{
+                p{
+                    transform: translateY(-100%);
+                }
+            }
+        }
+        
+    }
+
+    
+}
+
+.header{
+    top: 0;
+    left: 0;
+}

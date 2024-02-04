@@ -34,28 +34,32 @@
         }
 
         .close{
-            font-family: Helvetica;
             position: absolute;
             right: $baseUnit;
             top: $baseUnit;
-            font-size: 10px;
             cursor: pointer;
             z-index: 21000;
 
-            &:before{
-                content: '';
-                position: absolute;
-                transform: translate(-50%, -50%);
-                bottom: -4px;
-                left: 50%;
-                height: 1px ;
-                width: 0%;
-                background-color: #dcdcdc88;
-                transition: all 300ms cubic-bezier(.72,0,.23,1);
+            &__hoverable{
+                height: 14px;
+                font-size: 10px;
+                overflow: hidden;
+                p{
+                    font-family: Helvetica, sans-serif;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    transform: translateY(0%);
+                    transition: all 500ms cubic-bezier(.15,.77,.29,.92);
+                    color: $white;
+                    
+                }
             }
-            &:hover{
-                &:before{
-                    width: 100%;
+    
+            @media screen and (min-width: $max_tablette) {
+                &:hover{
+                    p{
+                        transform: translateY(-100%);
+                    }
                 }
             }
         }
