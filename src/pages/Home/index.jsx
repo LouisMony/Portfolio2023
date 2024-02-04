@@ -24,7 +24,7 @@ const Home = () => {
     const [title, setTitle] = useState(null)
     const [scrollInfo, setScrollInfo] = useState({
       id: null,
-      length: 10
+      length: 6
     })
     
     const handleClickTitle = () => {
