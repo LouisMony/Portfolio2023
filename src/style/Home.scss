@@ -128,12 +128,22 @@
             object-fit: cover;
             filter: brightness(.25); 
             transition: all 300ms linear;   
+
+            &:hover{
+                filter: brightness(.5); 
+                cursor: pointer;
+            }
         }
 
         .swiper-slide-active{
             img{
                 transform: scale(1.1);
                 filter: brightness(.75); 
+
+                &:hover{
+                    filter: brightness(.75); 
+                    cursor: initial;
+                }
             }
         }
     }
