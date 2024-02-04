@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import '../../style/Homev2.scss'
+import '../../style/Home.scss'
 import { useNavigate } from "react-router-dom";
 import { handleTransi } from "../../js/handleTransi";
 
@@ -13,8 +13,6 @@ import SwiperElement from "./Swiper";
 
 //SLIDER 
 
-
-
 const Home = () => {
     const homeRef = useRef(null)
     const sliderItems = worklist
@@ -24,13 +22,14 @@ const Home = () => {
     const [title, setTitle] = useState(null)
     const [scrollInfo, setScrollInfo] = useState({
       id: null,
-      length: 6
+      length: 5
     })
     
     const handleClickTitle = () => {
       let activeClip = sliderItems.find(item => item.id === activeItem);
       naviguate('/work/'+activeClip.link)
     }
+
 
     const handleChangeSlide = (swiper) => {
       const activeIndex = swiper.activeIndex
