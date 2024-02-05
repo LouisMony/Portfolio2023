@@ -5,7 +5,7 @@ export const worklist = [
         name: "Kia OSB",
         link: "kia", 
         type: "Professional",
-        background : '/media/work/kia/banner.webp'
+        background : '/media/work/kia/banner_compressed.webp'
     },
     {
       id: 1,
@@ -13,7 +13,7 @@ export const worklist = [
       name: "AIDES Campaign",
       link: "aides", 
       type: "Professional",
-      background : '/media/work/aides/banner.webp'
+      background : '/media/work/aides/banner_compressed.webp'
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export const worklist = [
       name: "Prime Prono",
       link: "primeprono", 
       type: "Personal",
-      background: '/media/work/primeprono/banner.webp'
+      background: '/media/work/primeprono/banner_compressed.webp'
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export const worklist = [
       name: "Rolland Games",
       link: "rolland", 
       type: "Personal",
-      background: '/media/work/rolland/banner.webp'
+      background: '/media/work/rolland/banner_compressed.webp'
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ export const worklist = [
       name: "Event",
       link: "eventapp", 
       type: "School",
-      background : '/media/work/eventapp/banner.webp'
+      background : '/media/work/eventapp/banner_compressed.webp'
     }
 ]
 
