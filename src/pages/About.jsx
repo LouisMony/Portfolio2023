@@ -88,15 +88,7 @@ function About(props){
               <p className="gsapAboutItem">{item.date}</p>
             </div>
           </div>
-          ))}
-
-          <ul>
-            <li className="gsapLink"><a target='_blank' href="mailto:louis.mony2@gmail.com">Email</a></li>
-            <li className="gsapLink"><a target='_blank' href="https://www.linkedin.com/in/louis-mony-2505331a2/">Linkedin</a></li>
-            <li className="gsapLink"><a target='_blank' href="https://github.com/LouisMony">Github</a></li>
-            <li className="gsapLink"><a target='_blank' href="https://soundcloud.com/user-937117132">SoundCloud</a></li>
-          </ul>
-          
+          ))}          
         </div>
         <div className="About__work">
           <h2 className="gsapH1About">All works</h2>
@@ -122,7 +114,14 @@ function About(props){
               </div>
             )
           ))}
+          <ul>
+            <li className="gsapLink"><a target='_blank' href="mailto:louis.mony2@gmail.com">Email</a></li>
+            <li className="gsapLink"><a target='_blank' href="https://www.linkedin.com/in/louis-mony-2505331a2/">Linkedin</a></li>
+            <li className="gsapLink"><a target='_blank' href="https://github.com/LouisMony">Github</a></li>
+            <li className="gsapLink"><a target='_blank' href="https://soundcloud.com/user-937117132">SoundCloud</a></li>
+          </ul>
         </div>
+          
       </div>
     );
   }

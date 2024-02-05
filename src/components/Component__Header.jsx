@@ -16,12 +16,14 @@ const Component__Header = ({ toggleAboutFunction }) => {
   return (
     <div className='header'>
       <Link to={'/'}>Louis Mony - Folio 2024</Link>
-      <div className='header__about' onClick={toggleAboutFunction}>
-        <div className='header__about__hoverable'>
-          <p>ABOUT</p>
-          <p>ABOUT</p>
+      {location.pathname === '/' ?
+        <div className='header__about' onClick={toggleAboutFunction}>
+          <div className='header__about__hoverable'>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+          </div>
         </div>
-      </div>
+      : null}
     </div>
   )
 }

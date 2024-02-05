@@ -11,6 +11,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: $max_tablette) {
+       flex-direction: column;
+       justify-content: left;
+       overflow-y: scroll;
+    }
     
     .Gsap_container{
         overflow: hidden;
@@ -29,8 +35,10 @@
         width: 40%;
         height: 100vh;
         //position: relative;
-        @media screen and (max-width: $max_mobile) {
+        @media screen and (max-width: $max_tablette) {
             width: 100%;
+            height: fit-content;
+            
         }
 
         .close{
@@ -99,28 +107,7 @@
             }
         }
 
-        ul{
-            list-style-type: none;
-            position: absolute;
-            bottom: $baseUnit;
-
-            li{
-                a{
-                    font-family: Helvetica;
-                    text-transform: uppercase;
-                    font-size: 10px;
-                    opacity: .5;
-
-                    &:hover{
-                        opacity: 1;
-                    }
-
-                    @media screen and (max-width: $max_mobile) {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
+        
     }
 
     &__work{
@@ -133,8 +120,9 @@
         flex-direction: column;
         justify-content: end;
 
-        @media screen and (max-width: $max_mobile) {
-            display: none;
+        @media screen and (max-width: $max_tablette) {
+            width: 100%;
+            height: fit-content;
         }
 
 
@@ -153,7 +141,6 @@
             cursor: pointer;
         }
         &__item{
-           
             width: 100%;
             display: flex;
             align-items: start;
@@ -171,6 +158,38 @@
 
                 span{
                     opacity: .5;
+                }
+            }
+        }
+        ul{
+            list-style-type: none;
+            position: fixed;
+            bottom: $baseUnit;
+            left: $baseUnit;
+
+            @media screen and (max-width: $max_tablette) {
+                position: relative;
+                left: 0;
+                margin-top: calc($baseUnit*2);
+                display: flex;
+                gap: $baseUnit;
+            }
+
+            li{
+
+                a{
+                    font-family: Helvetica;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    opacity: .5;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+
+                    @media screen and (max-width: $max_mobile) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
