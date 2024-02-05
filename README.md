@@ -76,7 +76,7 @@ Welcome to my GitHub portfolio! I am a passionate front-end junior web developer
 ## Overview
 
 [Insert a screenshot or GIF of your site here]
-![Site Screenshot](https://i.ibb.co/b3hYzfK/Capture-d-e-cran-2024-02-05-a-09-19-19.png)
+![Site Screenshot](https://i.ibb.co/r5jYjWs/Mac-Book-Pro-14-16.png)
 
 ## How to Use
 
