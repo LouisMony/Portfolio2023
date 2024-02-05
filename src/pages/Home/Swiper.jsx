@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Magnetic from '../../components/Magnetic';
+import { Mousewheel, Pagination } from 'swiper/modules';
 
 const SwiperElement = (props) => {
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -63,6 +63,8 @@ const SwiperElement = (props) => {
                 className="Home2__swiper"
                 speed={800}
                 onSlideChange={(swiper) => props.handleChangeSlide(swiper)}
+                mousewheel={true}
+                modules={[Mousewheel]}
                 onSwiper={(swiper) => { swiperRef.current = swiper; }}
             >
                 {props.sliderItems &&
