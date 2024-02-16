@@ -48,7 +48,6 @@ const Work = (props) => {
             <DescriptionWork textContent={paraA} label={'Context'} />
             <Gallery directory={directory} />
             <div className='work__spacer'></div>
-            <DescriptionWork textContent={paraA} label={'Context'} />
             <FooterWork directory={directory} nextLink={link} textLink={linkname}/>
         </div>
     );
