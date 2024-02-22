@@ -108,7 +108,7 @@
             width: calc((100% / 12) * 8);
         }
         @media screen and (max-width: $max_mobile) {
-            width: calc((100% / 12) * 10);
+            width: calc(100% - 48px);
         }
         
     

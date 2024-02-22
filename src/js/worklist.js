@@ -77,7 +77,7 @@ export const projectsData = [
     data: {
       date: "11.2023",
       type: "Personal",
-      stack: "Webdesign - FRONT-END & Back-end development",
+      stack: "Webdesign - Full Stack development",
       projectName: "Prime Prono",
       demolink: "https://primeprono.netlify.app/",
       directory: 'primeprono',
@@ -92,7 +92,7 @@ export const projectsData = [
     data: {
       date: "11.2023",
       type: "Personal",
-      stack: "Webdesign - FRONT-END & Back-end development",
+      stack: "Webdesign - Full Stack development",
       projectName: "Rolland games",
       demolink: "https://rollandgames.netlify.app/",
       directory: 'rolland',
