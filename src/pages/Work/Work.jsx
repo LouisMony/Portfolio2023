@@ -53,5 +53,4 @@ const Work = (props) => {
     );
 };
 
-// Enveloppez votre composant avec la fonction de transition ici
 export default transition(Work);

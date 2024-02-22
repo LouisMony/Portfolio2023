@@ -88,11 +88,24 @@
                     color: $background;
                     position: relative;
                     transition: all 200ms linear;
-        
-                    @media screen and (min-width: $max_tablette) {
-                        &:hover{
-                            background-color: rgb(169, 169, 169);
-                            border-color: rgb(169, 169, 169);
+
+                    a{
+                        display: block;
+                        height: 28px;
+                        overflow: hidden;
+                        
+                        span{
+                            display: block;
+                            transform: translateY(0);
+                            transition: all 500ms cubic-bezier(.15,.77,.29,.92);
+                        }
+                    }
+
+                    &:hover{
+                        a{
+                            span{
+                                transform: translateY(-100%);
+                            }
                         }
                     }
                 }
@@ -215,10 +228,11 @@
 
         &__container{
             width: calc(10*(100vw/12));
-            height: fit-content;
+            height: 90vh;
 
             img{
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
 
                 @media (prefers-reduced-motion: no-preference){
