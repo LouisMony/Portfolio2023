@@ -46,7 +46,7 @@ const DescriptionWork = (props) => {
         <div className='work__desc' ref={textContainerRef}>
             <div className='work__desc__line'></div>
             <div className='work__desc__label'>
-                <p>Context : </p>
+                <p>Context </p>
                 
             </div>
             <div className='work__desc__text'>

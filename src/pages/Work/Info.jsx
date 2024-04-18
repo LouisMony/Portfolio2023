@@ -35,12 +35,12 @@ const Info = (props) => {
         <div ref={infoBloc} className='work__banner__content__info'>
             <div className='work__banner__content__info__stack info__item'>{props.stack}</div>
             <div className='work__banner__content__info__date info__item'>{props.date}</div>
-            <div className='work__banner__content__info__visit info__item'>
+            {/* <div className='work__banner__content__info__visit info__item'>
                 <a target='_blanck' href={props.demolink}>
                     <span>View Project</span>
                     <span>View Project</span>
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }

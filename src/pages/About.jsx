@@ -6,7 +6,7 @@ import SplitType from 'split-type';
 function About(props){
 
     const carreerData = [
-      { role: 'WEB DEVELOPPER', company: 'TKORP - INTERNSHIP', date: '2023.2024' },
+      { role: 'WEB DEVELOPPER & WEB DESIGNER', company: 'TKORP - INTERNSHIP', date: '2023.2024' },
       { role: 'WEB DEVELOPPER & WEB DESIGNER', company: 'INNOCEAN FRANCE - INTERNSHIP', date: '2022.2023' },
       { role: 'WEB INTEGRATOR & WEB DESIGNER', company: 'INNOCEAN FRANCE - INTERNSHIP', date: '2021.2023' },
     ];
