@@ -94,25 +94,14 @@ function About(props){
           <h2 className="gsapH1About">All works</h2>
           <div className="lineAbout"></div>
           {workData.map((item, index) => (
-            item.link ? (
-              <a className="About__work__item linkable" target="_blank" key={index} href={item.link}>
-                <div className="Gsap_container">
-                  <p className="gsapAboutItem">{item.name}<br/><span>{item.skills} - {item.type}</span></p>
-                </div>
-                <div className="Gsap_container">
-                  <p className="gsapAboutItem">{item.date}</p>
-                </div>
-              </a>
-            ) : (
-              <div className="About__work__item" key={index}>
-                <div className="Gsap_container">
-                  <p className="gsapAboutItem">{item.name}<br/><span>{item.skills} - {item.type}</span></p>
-                </div>
-                <div className="Gsap_container">
-                  <p className="gsapAboutItem">{item.date}</p>
-                </div>
+            <div className="About__work__item" key={index}>
+              <div className="Gsap_container">
+                <p className="gsapAboutItem">{item.name}<br/><span>{item.skills} - {item.type}</span></p>
               </div>
-            )
+              <div className="Gsap_container">
+                <p className="gsapAboutItem">{item.date}</p>
+              </div>
+            </div>
           ))}
           <ul>
             <li className="gsapLink"><a target='_blank' href="mailto:louis.mony2@gmail.com">Email</a></li>
