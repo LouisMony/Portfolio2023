@@ -54,6 +54,9 @@ const SwiperElement = (props) => {
         }
     }, [swiperRef.current]);
 
+    console.log(props.sliderItems);
+    
+
     return (
         <div onClick={handleClick} className='swiper-global'>
             <Swiper

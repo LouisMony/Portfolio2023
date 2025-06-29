@@ -1,6 +1,22 @@
 export const worklist = [
     {
         id: 0,
+        date: "05.2025",
+        name: "PAUL MONTARLIER",
+        link: "paulmontarlier", 
+        type: "Professional",
+        background : '/media/work/kia/banner_compressed.webp'
+    },
+    {
+        id: 1,
+        date: "03.2025",
+        name: "TKORP",
+        link: "tkorp", 
+        type: "Professional",
+        background : '/media/work/kia/banner_compressed.webp'
+    },
+    {
+        id: 2,
         date: "04.2023",
         name: "Kia OSB",
         link: "kia", 
@@ -8,7 +24,7 @@ export const worklist = [
         background : '/media/work/kia/banner_compressed.webp'
     },
     {
-      id: 1,
+      id: 3,
       date: "10.2022",
       name: "AIDES Campaign",
       link: "aides", 
@@ -16,7 +32,7 @@ export const worklist = [
       background : '/media/work/aides/banner_compressed.webp'
     },
     {
-      id: 2,
+      id: 4,
       date: "09.2023",
       name: "Prime Prono",
       link: "primeprono", 
@@ -24,7 +40,7 @@ export const worklist = [
       background: '/media/work/primeprono/banner_compressed.webp'
     },
     {
-      id: 3,
+      id: 5,
       date: "11.2023",
       name: "Rolland Games",
       link: "rolland", 
@@ -32,7 +48,7 @@ export const worklist = [
       background: '/media/work/rolland/banner_compressed.webp'
     },
     {
-      id: 4,
+      id: 6,
       date: "01.2023",
       name: "Event",
       link: "eventapp", 
@@ -115,6 +131,36 @@ export const projectsData = [
       paraB: "The front-end of the project is in Vue JS, and the backend as well as the back office work on the Airtable platform to facilitate the administration of the tool for the client. Designed by my-self on Figma.",
       link: 'kia',
       linkname: 'KIA OSB'
+    },
+  },
+  {
+    path: 'work/paul-montarlier',
+    data: {
+      date: "05.2025",
+      type: "Professional",
+      stack: "Webdesign - FRONT-END development",
+      projectName: "Paul Montarlier",
+      demolink: "https://events-lesfousduroy.netlify.app/me-connecter",
+      directory: 'paulmontarlier',
+      paraA: 'Welcome to the "Event" application designed to simplify the planning of events in board and card game stores. You can say goodbye to paper lists and disorganization. Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel, etc...',
+      paraB: "The front-end of the project is in Vue JS, and the backend as well as the back office work on the Airtable platform to facilitate the administration of the tool for the client. Designed by my-self on Figma.",
+      link: 'paulmontarlier',
+      linkname: 'Paul Montarlier'
+    },
+  },
+  {
+    path: 'work/tkorp',
+    data: {
+      date: "03.2025",
+      type: "Professional",
+      stack: "Webdesign - FRONT-END development",
+      projectName: "TKORP",
+      demolink: "https://www.tkorp.com/",
+      directory: 'tkorp',
+      paraA: 'Welcome to the "Event" application designed to simplify the planning of events in board and card game stores. You can say goodbye to paper lists and disorganization. Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel, etc...',
+      paraB: "The front-end of the project is in Vue JS, and the backend as well as the back office work on the Airtable platform to facilitate the administration of the tool for the client. Designed by my-self on Figma.",
+      link: 'tkorp',
+      linkname: 'TKORP'
     },
   },
 ];

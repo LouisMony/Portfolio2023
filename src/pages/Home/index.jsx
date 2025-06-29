@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import '../../style/Home.scss'
 import { useNavigate } from "react-router-dom";
-import { handleTransi } from "../../js/handleTransi";
 
 //COMPOSANT
 import Title from "./Title";
